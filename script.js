@@ -324,4 +324,60 @@
       }, 1100);
     });
   }
+
+  // ===================== Click-to-copy + toast =====================
+  const copyToast = document.getElementById("copyToast");
+  let copyToastTimer = null;
+  const showCopyToast = (msg) => {
+    if (!copyToast) return;
+    const textEl = copyToast.querySelector(".copy-toast-text");
+    if (textEl && msg) textEl.textContent = msg;
+    copyToast.classList.remove("show");
+    void copyToast.offsetWidth;
+    copyToast.classList.add("show");
+    copyToast.setAttribute("aria-hidden", "false");
+    if (copyToastTimer) clearTimeout(copyToastTimer);
+    copyToastTimer = setTimeout(() => {
+      copyToast.classList.remove("show");
+      copyToast.setAttribute("aria-hidden", "true");
+    }, 1800);
+  };
+
+  const fallbackCopy = (text) => {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      ta.style.pointerEvents = "none";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  };
+
+  document.addEventListener("click", (e) => {
+    const target = e.target.closest("[data-copy]");
+    if (!target) return;
+    const text = target.getAttribute("data-copy");
+    if (!text) return;
+    e.preventDefault();
+    const onSuccess = () => {
+      target.classList.add("just-copied");
+      setTimeout(() => target.classList.remove("just-copied"), 900);
+      const isEmail = /@/.test(text);
+      showCopyToast(isEmail ? "Đã sao chép email" : "Đã sao chép");
+    };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(onSuccess).catch(() => {
+        if (fallbackCopy(text)) onSuccess();
+      });
+    } else if (fallbackCopy(text)) {
+      onSuccess();
+    }
+  });
 })();

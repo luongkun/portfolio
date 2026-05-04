@@ -507,7 +507,7 @@
           <h3 class="contact-info-title">Kết nối với mình</h3>
           <p class="contact-info-desc">Dù bạn có dự án cần triển khai, câu hỏi kỹ thuật, hay chỉ muốn chào hỏi — hòm thư của mình luôn rộng mở.</p>
           <div class="clinks" role="list">
-            <a href="mailto:lucifermeta0210@gmail.com" class="clink" role="listitem" aria-label="Email lucifermeta0210@gmail.com">
+            <a href="mailto:lucifermeta0210@gmail.com" class="clink" role="listitem" data-copy="lucifermeta0210@gmail.com" aria-label="Email lucifermeta0210@gmail.com — bấm để sao chép">
               <div class="clink-ico em" aria-hidden="true"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
               <div class="clink-text">
                 <div class="clink-lbl">Email</div>
@@ -616,6 +616,12 @@
       </span>
     </button>
     <audio id="bgAudio" loop preload="none"></audio>
+  </div>
+
+  <!-- Copy-to-clipboard toast (shown when user clicks anything with [data-copy]) -->
+  <div id="copyToast" class="copy-toast" role="status" aria-live="polite" aria-hidden="true">
+    <svg class="copy-toast-ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+    <span class="copy-toast-text">Đã sao chép email</span>
   </div>
 
   <script src="script.js"></script>
