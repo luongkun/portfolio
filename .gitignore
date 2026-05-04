@@ -1,0 +1,5 @@
+node_modules/
+*.log
+.DS_Store
+styles.min.css
+script.min.js

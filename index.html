@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio cá nhân của Lương Senpai — Fullstack Developer" />
+  <title>Portfolio | Lương Senpai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>:root{--bg-1: #fdf6fa;--bg-2: #fbeef5;--bg-3: #f3eafc;--bg-4: #eef3ff;--text: #0f0f14;--text-muted: #5b5d72;--text-soft: #8a8da6;--card: #ffffff;--card-soft: rgba(255, 255, 255, .7);--border: rgba(15, 15, 20, .06);--border-strong: rgba(15, 15, 20, .1);--accent-from: #ff5e95;--accent-mid: #c75ed8;--accent-to: #7d56e8;--accent-soft: rgba(199, 94, 216, .12);--black: #0f0f14;--black-soft: #1a1a22;--shadow-sm: 0 4px 12px -4px rgba(120, 80, 180, .12);--shadow-md: 0 10px 30px -10px rgba(120, 80, 180, .2);--shadow-lg: 0 30px 60px -20px rgba(120, 80, 180, .25);--shadow-xl: 0 40px 80px -25px rgba(120, 80, 180, .3);--radius-sm: 12px;--radius-md: 18px;--radius-lg: 28px;--radius-xl: 40px;--radius-pill: 999px;--max-width: 1200px;--nav-height: 92px;--font-sans: "Plus Jakarta Sans", "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;--font-display: "Be Vietnam Pro", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;--font-mono: "JetBrains Mono", "Fira Code", monospace;--transition: .3s cubic-bezier(.645, .045, .355, 1)}[data-theme=dark]{--bg-1: #0e0c1a;--bg-2: #14112a;--bg-3: #1a1430;--bg-4: #100d22;--text: #f5f3ff;--text-muted: #b6b2d4;--text-soft: #8a85a8;--card: #1c1735;--card-soft: rgba(28, 23, 53, .7);--border: rgba(255, 255, 255, .08);--border-strong: rgba(255, 255, 255, .16);--accent-soft: rgba(199, 94, 216, .2);--black: #f5f3ff;--black-soft: #ffffff;--shadow-sm: 0 4px 12px -4px rgba(0, 0, 0, .4);--shadow-md: 0 10px 30px -10px rgba(0, 0, 0, .5);--shadow-lg: 0 30px 60px -20px rgba(0, 0, 0, .55);--shadow-xl: 0 40px 80px -25px rgba(0, 0, 0, .6)}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:var(--nav-height)}body{font-family:var(--font-sans);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;background:var(--bg-1);background-image:radial-gradient(at 20% 0%,var(--bg-2) 0%,transparent 50%),radial-gradient(at 80% 0%,var(--bg-3) 0%,transparent 50%),radial-gradient(at 50% 100%,var(--bg-4) 0%,transparent 50%);background-attachment:fixed;min-height:100vh;overflow-x:hidden;transition:background-color var(--transition),color var(--transition)}[data-theme=dark] body{background-color:#07051a;background-image:radial-gradient(at 20% 0%,rgba(125,86,232,.22) 0%,transparent 45%),radial-gradient(at 80% 0%,rgba(255,94,149,.16) 0%,transparent 45%),radial-gradient(at 50% 100%,rgba(80,60,200,.18) 0%,transparent 45%)}img,svg{max-width:100%;display:block}a{color:inherit;text-decoration:none;transition:color var(--transition)}ul{list-style:none}button{cursor:pointer;font-family:inherit;border:none;background:none;color:inherit}::selection{background:var(--accent-from);color:#fff}.container{max-width:var(--max-width);margin:0 auto;padding:0 28px}.text-grad{background:linear-gradient(120deg,var(--accent-from),var(--accent-mid) 50%,var(--accent-to));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.text-grad-light{background:linear-gradient(120deg,#ffd6e8,#fff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.kicker{display:inline-block;font-family:var(--font-mono);font-size:.85rem;font-weight:600;letter-spacing:.08em;color:var(--accent-mid);margin-bottom:16px;text-transform:uppercase}.kicker-light{color:#ffffffd9}.section{padding:100px 0;position:relative;z-index:1}.section-head{margin-bottom:60px;max-width:720px}.section-heading{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:800;line-height:1.2;letter-spacing:-.015em;color:var(--text);padding-top:.05em}.shapes{position:absolute;inset:0;height:100vh;min-height:800px;pointer-events:none;z-index:0;overflow:hidden;-webkit-mask-image:radial-gradient(ellipse 32% 36% at 22% 50%,transparent 0%,rgba(0,0,0,.35) 60%,black 100%);mask-image:radial-gradient(ellipse 32% 36% at 22% 50%,transparent 0%,rgba(0,0,0,.35) 60%,black 100%)}.shape{position:absolute;will-change:transform;transform:translateZ(0);backface-visibility:hidden}.sphere{border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#f0deff 30%,#c8a8ff 70%,#9b6cf0);box-shadow:inset -8px -10px 20px #501ea040,0 8px 20px #7846c833}.s-sphere-1{top:4%;left:18%;width:38px;height:38px;animation:floatA 9s ease-in-out infinite}.s-sphere-2{top:11%;right:30%;width:22px;height:22px;background:radial-gradient(circle at 30% 30%,#fff,#fde2ec 30%,#f7a5c2 70%,#ec5b8c);animation:floatB 7s ease-in-out infinite}.s-sphere-3{top:22%;right:5%;width:60px;height:60px;background:radial-gradient(circle at 30% 30%,#fff,#d4ecff 30%,#92c8f0 70%,#4f9bd6);animation:floatA 11s ease-in-out infinite}.s-sphere-4{top:6%;right:42%;width:28px;height:28px;background:radial-gradient(circle at 30% 30%,#fff,#fde2ec 30%,#f7a5c2 70%,#ec5b8c);animation:floatB 8s ease-in-out infinite}.s-sphere-5{bottom:8%;left:32%;width:18px;height:18px;background:radial-gradient(circle at 30% 30%,#fff,#f7e5fb 30%,#d4a8e8 70%,#a55fcc);animation:floatA 6s ease-in-out infinite}.s-cube-1{top:2%;left:30%;width:52px;height:52px;--base-rot: -12deg;animation:floatSpin 14s ease-in-out infinite}.s-cube-2{bottom:18%;right:22%;width:70px;height:70px;--base-rot: 18deg;animation:floatSpin 16s ease-in-out infinite reverse}.s-octa-1{top:7%;right:30%;width:46px;height:46px;--base-rot: 20deg;animation:floatSpin 11s ease-in-out infinite}.s-octa-2{bottom:12%;left:4%;width:80px;height:80px;--base-rot: -15deg;animation:floatSpin 13s ease-in-out infinite reverse}.s-octa-3{top:56%;right:4%;width:60px;height:60px;--base-rot: 8deg;animation:floatSpin 12s ease-in-out infinite}.capsule{border-radius:var(--radius-pill);background:linear-gradient(135deg,#fff7fb,#fbe2ec);box-shadow:inset -4px -6px 12px #b45a8c26,0 6px 14px #b45a8c2e}.s-capsule-1{top:14%;right:20%;width:90px;height:30px;--base-rot: -25deg;animation:floatSpin 10s ease-in-out infinite}.s-capsule-2{bottom:4%;left:38%;width:70px;height:24px;--base-rot: 25deg;background:linear-gradient(135deg,#f7eefe,#e5d2fb);animation:floatSpin 11s ease-in-out infinite reverse}.bubble{border-radius:50%;background:radial-gradient(circle at 30% 25%,#fffffff2,#ffffff80 35%,#dcdcf026 65%,#dcdcf00d);border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(2px)}.s-bubble-1{top:38%;right:22%;width:36px;height:36px;animation:bubblePulse 6s ease-in-out infinite}.s-bubble-2{bottom:6%;left:52%;width:22px;height:22px;animation:bubblePulse 5s ease-in-out infinite reverse}.s-bubble-3{top:52%;right:32%;width:18px;height:18px;animation:bubblePulse 4.5s ease-in-out infinite}[data-theme=dark] .bubble{background:radial-gradient(circle at 30% 25%,#ffffff4d,#ffffff1a 35%,#50508c26 65%,#50508c0d);border:1px solid rgba(255,255,255,.15)}@keyframes floatA{0%,to{transform:translate(0)}33%{transform:translate(8px,-18px)}66%{transform:translate(-6px,-28px)}}@keyframes floatB{0%,to{transform:translate(0)}50%{transform:translate(-10px,-22px)}}@keyframes floatSpin{0%,to{transform:translateY(0) rotate(var(--base-rot, 0deg))}50%{transform:translateY(-26px) rotate(calc(var(--base-rot, 0deg) + 18deg))}}@keyframes bubblePulse{0%,to{transform:translate(0) scale(1);opacity:.85}50%{transform:translate(6px,-16px) scale(1.12);opacity:1}}.nav{position:fixed;top:18px;left:0;right:0;z-index:100;display:flex;justify-content:center;padding:0 24px;pointer-events:none}.nav-pill{pointer-events:auto;width:100%;max-width:var(--max-width);background:var(--card);border:1px solid var(--border);border-radius:var(--radius-pill);padding:12px 18px 12px 28px;display:flex;align-items:center;gap:24px;box-shadow:var(--shadow-md);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:box-shadow var(--transition),transform var(--transition)}.nav-logo{font-size:1.25rem;font-weight:800;letter-spacing:.02em;color:var(--text);white-space:nowrap;flex-shrink:0}.dot-accent{color:var(--accent-from)}.nav-links{display:flex;gap:32px;margin-left:auto;margin-right:auto}.nav-links a{font-size:.875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);position:relative;padding:4px 0}.nav-links a:hover{color:var(--text)}.nav-links a:after{content:"";position:absolute;left:50%;bottom:-4px;width:0;height:2px;background:linear-gradient(120deg,var(--accent-from),var(--accent-to));border-radius:2px;transition:all var(--transition);transform:translate(-50%)}.nav-links a:hover:after{width:100%}.nav-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}.theme-toggle{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;color:var(--text);transition:all var(--transition);background:transparent}.theme-toggle:hover{background:var(--accent-soft);color:var(--accent-mid)}.theme-toggle .icon-sun{display:none}[data-theme=dark] .theme-toggle .icon-sun{display:block}[data-theme=dark] .theme-toggle .icon-moon{display:none}.btn-contact{background:var(--black);color:#fff;padding:12px 24px;border-radius:var(--radius-pill);font-size:.9rem;font-weight:600;white-space:nowrap;transition:all var(--transition)}.btn-contact:hover{transform:translateY(-2px);box-shadow:0 8px 16px #0f0f1440}[data-theme=dark] .btn-contact{background:#fff;color:#0f0f14}.menu-toggle{display:none;width:42px;height:42px;flex-direction:column;justify-content:center;align-items:center;gap:5px;border-radius:50%}.menu-toggle span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all var(--transition)}.menu-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.menu-toggle.active span:nth-child(2){opacity:0}.menu-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.hero{position:relative;padding:calc(var(--nav-height) + 40px) 0 100px;min-height:100vh;display:flex;align-items:center;z-index:1}.hero-glow{position:absolute;top:38%;left:6%;width:580px;height:580px;background:radial-gradient(circle at 30% 30%,rgba(255,94,149,.32) 0%,rgba(199,94,216,.2) 30%,rgba(125,86,232,.14) 55%,transparent 75%);filter:blur(40px);pointer-events:none;z-index:0;animation:heroGlowDrift 9s ease-in-out infinite;border-radius:50%}@keyframes heroGlowDrift{0%,to{transform:translate(0) scale(1);opacity:.85}50%{transform:translate(30px,-20px) scale(1.08);opacity:1}}[data-theme=dark] .hero-glow{background:radial-gradient(circle at 30% 30%,rgba(255,94,149,.22) 0%,rgba(199,94,216,.16) 30%,rgba(125,86,232,.12) 55%,transparent 75%)}.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}.hero-left{position:relative;z-index:2}.hero-badge{display:inline-flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);padding:10px 20px;border-radius:var(--radius-pill);font-size:.95rem;font-weight:600;color:var(--text);box-shadow:var(--shadow-sm);margin-bottom:32px}.badge-dot{width:8px;height:8px;border-radius:50%;background:var(--accent-to);box-shadow:0 0 0 4px #7d56e82e}.badge-icon{font-size:1.05rem;display:inline-block;animation:rocketWiggle 3s ease-in-out infinite}@keyframes rocketWiggle{0%,to{transform:rotate(0)}50%{transform:rotate(-12deg) translateY(-2px)}}.hero-name{font-family:var(--font-display);font-size:clamp(3rem,7vw,5.5rem);font-weight:800;line-height:1.05;letter-spacing:-.025em;margin-bottom:28px;display:flex;flex-direction:column;padding-top:.1em}.name-top{color:var(--text);white-space:nowrap}.name-bottom{position:relative;display:inline-block;white-space:nowrap}.name-text,.name-shine{display:inline-block}.name-text{background:linear-gradient(120deg,var(--accent-from) 0%,var(--accent-mid) 50%,var(--accent-to) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 8px 24px rgba(199,94,216,.32))}.name-shine{position:absolute;top:0;left:0;background-image:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.92) 48%,rgba(255,255,255,.98) 50%,rgba(255,255,255,.92) 52%,transparent 65%);background-size:250% 100%;background-repeat:no-repeat;background-position:200% 50%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:nameShine 4.5s ease-in-out infinite;pointer-events:none}@keyframes nameShine{0%,25%{background-position:200% 50%}75%,to{background-position:-50% 50%}}@media(max-width:480px){.name-top,.name-bottom{white-space:normal}}.hero-tag{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;font-family:var(--font-mono);font-size:.92rem;font-weight:500;padding:8px 16px;background:#ffffffb3;border:1px solid var(--border);border-radius:12px;margin-bottom:24px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:var(--shadow-sm)}.t-bracket{color:var(--accent-mid);font-weight:700}.t-key{color:#6c5ce7;font-weight:600}.t-string{color:var(--accent-from)}.t-arrow{color:var(--text-soft);font-weight:600}[data-theme=dark] .hero-tag{background:#140f288c}[data-theme=dark] .t-key{color:#b39df0}[data-theme=dark] .t-string{color:#ffa6c4}.hero-desc{font-size:1.125rem;color:var(--text-muted);max-width:480px;margin-bottom:24px;line-height:1.7}.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}.meta-chip{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;background:#ffffffb3;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:.85rem;font-weight:500;color:var(--text-muted);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:var(--transition)}.meta-chip:hover{background:#fffffff2;transform:translateY(-2px);border-color:var(--accent-mid);color:var(--text);box-shadow:var(--shadow-sm)}.meta-emoji{font-size:.95rem;line-height:1}[data-theme=dark] .meta-chip{background:#ffffff0d}[data-theme=dark] .meta-chip:hover{background:#ffffff1a}.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}.btn-primary{display:inline-flex;align-items:center;gap:14px;background:var(--black);color:#fff;padding:18px 28px 18px 32px;border-radius:var(--radius-pill);font-size:1rem;font-weight:600;transition:all var(--transition);box-shadow:0 10px 25px -8px #0f0f1466}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 35px -8px #0f0f1480}.btn-arrow{width:36px;height:36px;border-radius:50%;background:#fff;color:var(--black);display:grid;place-items:center;transition:transform var(--transition)}.btn-primary:hover .btn-arrow{transform:translateY(4px)}[data-theme=dark] .btn-primary{background:#fff;color:#0f0f14}[data-theme=dark] .btn-arrow{background:#0f0f14;color:#fff}.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:17px 26px;font-size:1rem;font-weight:600;color:var(--text);background:transparent;border:1.5px solid var(--border);border-radius:var(--radius-pill);transition:var(--transition)}.btn-ghost:hover{background:var(--accent-soft);border-color:var(--accent-mid);color:var(--accent-mid);transform:translateY(-3px)}.btn-arrow-inline{font-size:1.1rem;font-weight:700;transition:transform .3s ease;display:inline-block}.btn-ghost:hover .btn-arrow-inline{transform:translate(2px,-2px)}[data-theme=dark] .btn-ghost{color:var(--text)}[data-theme=dark] .btn-ghost:hover{background:#c75ed82e;color:#ffb6e0}.hero-right{position:relative;display:flex;justify-content:center;align-items:center;min-height:460px}.tech-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 28px 32px;width:100%;max-width:420px;box-shadow:var(--shadow-lg);position:relative;z-index:2;transform:rotate(-1.5deg);transition:transform var(--transition)}.tech-card:hover{transform:rotate(0) translateY(-4px)}.tech-card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px}.tech-card-title h3{font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:4px}.tech-card-title p{color:var(--text-soft);font-size:.9rem}.window-dots{display:flex;gap:6px}.window-dots span{width:11px;height:11px;border-radius:50%}.window-dots span:nth-child(1){background:#ff5f57}.window-dots span:nth-child(2){background:#febc2e}.window-dots span:nth-child(3){background:#28c840}.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.tech-icon{position:relative;aspect-ratio:1 / 1;background:linear-gradient(145deg,#f8f5fb,#fff);border:1px solid var(--border);border-radius:var(--radius-md);display:grid;place-items:center;padding:12px;transition:transform .4s cubic-bezier(.34,1.56,.64,1),box-shadow var(--transition),background .4s ease;cursor:pointer}.tech-icon:before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(135deg,var(--accent-from),var(--accent-to));opacity:0;transition:opacity .4s ease;z-index:0;pointer-events:none}.tech-icon:hover{transform:translateY(-6px) scale(1.08);box-shadow:0 18px 30px -10px #c75ed873;border-color:transparent}.tech-icon:hover:before{opacity:.18}.tech-icon img,.tech-icon>svg{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;animation:techIconFloat 3.6s ease-in-out infinite;transition:filter .3s ease;filter:drop-shadow(0 2px 4px rgba(0,0,0,.05))}.tech-icon:nth-child(1) img,.tech-icon:nth-child(1)>svg{animation-delay:0s}.tech-icon:nth-child(2) img,.tech-icon:nth-child(2)>svg{animation-delay:.25s}.tech-icon:nth-child(3) img,.tech-icon:nth-child(3)>svg{animation-delay:.5s}.tech-icon:nth-child(4) img,.tech-icon:nth-child(4)>svg{animation-delay:.75s}.tech-icon:nth-child(5) img,.tech-icon:nth-child(5)>svg{animation-delay:1s}.tech-icon:nth-child(6) img,.tech-icon:nth-child(6)>svg{animation-delay:1.25s}.tech-icon:nth-child(7) img,.tech-icon:nth-child(7)>svg{animation-delay:1.5s}.tech-icon:nth-child(8) img,.tech-icon:nth-child(8)>svg{animation-delay:1.75s}.tech-icon:hover img,.tech-icon:hover>svg{animation:techIconSpin .7s cubic-bezier(.34,1.56,.64,1);filter:drop-shadow(0 6px 12px rgba(199,94,216,.4))}@keyframes techIconFloat{0%,to{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(2deg)}}@keyframes techIconSpin{0%{transform:rotateY(0) scale(1)}50%{transform:rotateY(180deg) scale(1.15)}to{transform:rotateY(360deg) scale(1)}}[data-theme=dark] .tech-icon{background:linear-gradient(145deg,#16122c,#221b3f)}.status-card{position:absolute;bottom:-28px;left:16px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:14px 22px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-md);z-index:3;transform:rotate(2deg);transition:transform var(--transition),box-shadow var(--transition)}.status-card:hover{transform:rotate(0) translateY(-3px);box-shadow:var(--shadow-lg)}.status-pulse{position:relative;width:32px;height:32px;display:grid;place-items:center}.pulse-dot{position:relative;width:12px;height:12px;background:#16a34a;border-radius:50%;box-shadow:0 0 8px #16a34ab3;z-index:2}.pulse-ring{position:absolute;top:50%;left:50%;width:12px;height:12px;border-radius:50%;background:#16a34a8c;transform:translate(-50%,-50%);animation:pulseLive 1.8s ease-out infinite;z-index:1}@keyframes pulseLive{0%{width:12px;height:12px;opacity:.7}to{width:36px;height:36px;opacity:0}}.status-text small{display:block;font-family:var(--font-mono);font-size:.7rem;font-weight:600;color:var(--text-soft);letter-spacing:.08em;margin-bottom:2px}.status-text strong{font-size:1rem;font-weight:700;color:var(--text)}.scroll-down{position:absolute;bottom:92px;left:50%;transform:translate(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--text-soft);font-family:var(--font-mono);font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.75;transition:opacity .3s ease,color .3s ease;z-index:4}.scroll-down:hover{opacity:1;color:var(--accent-mid)}.scroll-mouse{width:22px;height:36px;border:2px solid currentColor;border-radius:12px;position:relative;display:block}.scroll-wheel{position:absolute;top:6px;left:50%;width:3px;height:7px;background:currentColor;border-radius:2px;transform:translate(-50%);animation:scrollWheel 1.8s ease-in-out infinite}@keyframes scrollWheel{0%{transform:translate(-50%);opacity:1}70%{transform:translate(-50%,12px);opacity:0}to{transform:translate(-50%);opacity:0}}.scroll-label{display:inline-block;animation:scrollLabelBounce 1.8s ease-in-out infinite}@keyframes scrollLabelBounce{0%,to{transform:translateY(0)}50%{transform:translateY(3px)}}.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:start}.about-text p{font-size:1.05rem;color:var(--text-muted);margin-bottom:18px;line-height:1.7}.about-text strong{color:var(--text);font-weight:700}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);padding:20px;text-align:center;transition:all var(--transition)}.stat:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}.stat strong{display:block;font-size:2rem;font-weight:800;background:linear-gradient(120deg,var(--accent-from),var(--accent-to));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.stat span{display:block;font-size:.85rem;color:var(--text-muted);margin-top:4px}.about-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-md);text-align:center;position:relative;overflow:hidden}.about-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right,var(--accent-soft),transparent 60%);z-index:0}.about-card>*{position:relative;z-index:1}.about-card .ava-wrap{position:relative;width:168px;height:168px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center}.about-card .ava-ring{position:absolute;inset:-6px;border-radius:50%;padding:4px;background:conic-gradient(from 0deg,var(--accent-from) 0deg,#ffffff 40deg,var(--accent-mid) 80deg,var(--accent-to) 160deg,transparent 220deg,transparent 320deg,var(--accent-from) 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:avaSpin 1.6s linear infinite;filter:drop-shadow(0 0 16px rgba(199,94,216,.7))}@keyframes avaSpin{to{transform:rotate(360deg)}}.about-card .ava-img{width:100%;height:100%;border-radius:50%;background:linear-gradient(145deg,#f7e6ff,#ede1ff);display:flex;align-items:center;justify-content:center;border:2px solid rgba(199,94,216,.18);position:relative;overflow:hidden;color:var(--accent-to)}[data-theme=dark] .about-card .ava-img{background:linear-gradient(145deg,#1a142e,#0d0820);border-color:#ffffff0f;color:#d8c5ff8c}.about-card .ava-img:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 35% 30%,rgba(199,94,216,.18),transparent 60%);pointer-events:none}.about-card .ava-status{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:600;color:#1bbf6f;background:#1bbf6f1a;border:1px solid rgba(27,191,111,.28);padding:7px 14px;border-radius:var(--radius-pill);margin:0 auto 18px}[data-theme=dark] .about-card .ava-status{background:#4ade8014;border-color:#4ade8038}.about-card .ava-status .sdot{width:8px;height:8px;background:#1bbf6f;border-radius:50%;animation:pulseG 2s infinite}@keyframes pulseG{0%,to{box-shadow:0 0 #1bbf6f80}50%{box-shadow:0 0 0 8px #1bbf6f00}}.avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-from),var(--accent-to));display:grid;place-items:center;color:#fff;font-size:2.5rem;font-weight:800;box-shadow:0 12px 25px -8px #c75ed880}.about-card h4{font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:4px}.role{color:var(--accent-mid);font-weight:600;margin-bottom:24px}.info-list{text-align:left;display:flex;flex-direction:column;gap:12px}.info-list li{display:flex;align-items:center;gap:12px;color:var(--text-muted);font-size:.95rem}.info-list li span{font-size:1.1rem}.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}.skill-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 28px;transition:all var(--transition);position:relative;overflow:hidden}.skill-card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-soft),transparent 60%);opacity:0;transition:opacity var(--transition)}.skill-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:#c75ed84d}.skill-card:hover:before{opacity:1}.skill-card>*{position:relative;z-index:1}.skill-icon-wrap{width:56px;height:56px;border-radius:var(--radius-md);background:linear-gradient(135deg,var(--accent-from),var(--accent-to));display:grid;place-items:center;font-size:1.6rem;margin-bottom:20px;box-shadow:0 8px 18px -6px #c75ed866}.skill-card h3{font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:10px}.skill-card p{color:var(--text-muted);font-size:.95rem;line-height:1.65}.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}.project-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:all var(--transition);display:flex;flex-direction:column}.project-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}.project-cover{aspect-ratio:16 / 10;display:grid;place-items:center;position:relative;overflow:hidden}.project-cover:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.4),transparent 60%)}.cover-emoji{font-size:4rem;filter:drop-shadow(0 6px 12px rgba(0,0,0,.18));position:relative;z-index:1;transition:transform var(--transition)}.project-card:hover .cover-emoji{transform:scale(1.15) rotate(-6deg)}.cover-1{background:linear-gradient(135deg,#ffd6e8,#ffb0d4 50%,#ff7eb6)}.cover-2{background:linear-gradient(135deg,#d6e9ff,#a8d0ff 50%,#6fadff)}.cover-3{background:linear-gradient(135deg,#e9d6ff,#c9a8ff 50%,#9c6fff)}.cover-4{background:linear-gradient(135deg,#fff5d6,#ffe1a8 50%,#ffc16f)}.project-body{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column}.project-tag{font-family:var(--font-mono);font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--accent-mid);margin-bottom:10px;text-transform:uppercase}.project-card h3{font-size:1.35rem;font-weight:800;color:var(--text);margin-bottom:10px}.project-card p{color:var(--text-muted);font-size:.95rem;margin-bottom:18px;flex:1}.project-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}.project-tech li{font-family:var(--font-mono);font-size:.72rem;background:var(--accent-soft);color:var(--accent-mid);padding:4px 10px;border-radius:var(--radius-pill);font-weight:600}.project-links{display:flex;gap:18px;font-size:.9rem;font-weight:600}.project-links a{color:var(--text);transition:color var(--transition)}.project-links a:hover{color:var(--accent-mid)}#contact{padding-bottom:120px}.contact-card{background:linear-gradient(135deg,#1a0f2e,#2d1b54,#5a2d8a);border-radius:var(--radius-xl);padding:80px 40px;text-align:center;position:relative;overflow:hidden;color:#fff;box-shadow:var(--shadow-xl)}.contact-card:before,.contact-card:after{content:"";position:absolute;border-radius:50%;filter:blur(50px);opacity:.45;pointer-events:none}.contact-card:before{width:320px;height:320px;top:-120px;left:-120px;background:var(--accent-from)}.contact-card:after{width:380px;height:380px;bottom:-160px;right:-160px;background:var(--accent-to)}.contact-card>*{position:relative;z-index:1}.contact-heading{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.015em;margin-bottom:20px;line-height:1.2;color:#fff;padding-top:.05em}.contact-sub{color:#fffc;max-width:540px;margin:0 auto 40px;font-size:1.05rem}.btn-contact-lg{display:inline-flex;align-items:center;gap:14px;background:#fff;color:#0f0f14;padding:18px 36px;border-radius:var(--radius-pill);font-size:1.05rem;font-weight:700;transition:all var(--transition);box-shadow:0 14px 35px -10px #00000040}.btn-contact-lg:hover{transform:translateY(-4px);box-shadow:0 20px 50px -10px #00000059}[data-theme=dark] .btn-contact-lg{background:#fff;color:#0f0f14;box-shadow:0 14px 35px -10px #ffffff2e}[data-theme=dark] .btn-contact-lg:hover{box-shadow:0 20px 50px -12px #ffffff47}.contact-socials{margin-top:44px;display:flex;justify-content:center;gap:16px}.contact-socials a{width:50px;height:50px;display:grid;place-items:center;border-radius:50%;background:#ffffff1a;color:#fff;border:1px solid rgba(255,255,255,.15);transition:all var(--transition)}.contact-socials a:hover{background:#fff3;transform:translateY(-3px)}.section-sub{max-width:560px;margin:14px auto 0;color:var(--text-muted);font-size:clamp(.95rem,1.5vw,1.06rem);line-height:1.65}.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,26px);margin-top:clamp(40px,5vw,60px)}.proj-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:border-color var(--transition),transform var(--transition),box-shadow var(--transition);position:relative}.proj-card:hover{border-color:var(--border-strong);transform:translateY(-8px);box-shadow:var(--shadow-lg)}.proj-thumb{position:relative;height:190px;overflow:hidden}.proj-thumb-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.6rem;transition:transform .5s ease;filter:drop-shadow(0 6px 12px rgba(0,0,0,.18))}.proj-card:hover .proj-thumb-bg{transform:scale(1.1) rotate(-3deg)}.proj-thumb-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.45) 100%);pointer-events:none}[data-theme=dark] .proj-thumb-ov{background:linear-gradient(180deg,transparent 30%,rgba(10,6,26,.85) 100%)}.tb-1{background:linear-gradient(135deg,#ff8fb1,#ff5e95)}.tb-2{background:linear-gradient(135deg,#b08bff,#7d56e8)}.tb-3{background:linear-gradient(135deg,#5ec8ee,#4f8ef7)}.tb-4{background:linear-gradient(135deg,#ffb371,#ff7a45)}.tb-5{background:linear-gradient(135deg,#ff7ad9,#c75ed8)}.tb-6{background:linear-gradient(135deg,#6dd6a3,#1bbf6f)}.proj-body{padding:22px;flex:1;display:flex;flex-direction:column}.proj-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;margin:0 0 9px;color:var(--text);line-height:1.3}.proj-desc{font-size:.9rem;color:var(--text-muted);line-height:1.65;margin:0 0 16px;flex:1}.proj-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}.proj-tag{font-size:.72rem;font-weight:600;padding:4px 11px;border-radius:var(--radius-pill);background:var(--accent-soft);color:var(--accent-to);border:1px solid rgba(125,86,232,.18);letter-spacing:.01em}[data-theme=dark] .proj-tag{color:#d8c5ff;background:#c75ed82e;border-color:#ffffff14}.proj-acts{display:flex;gap:9px}.pbtn{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:.82rem;font-weight:600;padding:10px 14px;border-radius:var(--radius-md);border:none;cursor:pointer;transition:all var(--transition);text-decoration:none}.pbtn.pri{background:linear-gradient(135deg,var(--accent-from),var(--accent-to));color:#fff;box-shadow:0 8px 18px -8px #c75ed880}.pbtn.pri:hover{opacity:.92;transform:translateY(-2px);box-shadow:0 14px 28px -10px #c75ed899}.pbtn.out{background:transparent;color:var(--text-muted);border:1px solid var(--border-strong)}.pbtn.out:hover{color:var(--text);border-color:var(--accent-to);background:var(--accent-soft);transform:translateY(-2px)}.contact-wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(36px,5vw,64px);align-items:start;margin-top:clamp(40px,5vw,60px)}.contact-info-title{font-family:var(--font-display);font-size:1.45rem;font-weight:700;margin:0 0 12px;color:var(--text)}.contact-info-desc{margin:0 0 26px;line-height:1.75;color:var(--text-muted);font-size:.98rem}.clinks{display:flex;flex-direction:column;gap:14px}.clink{display:flex;align-items:center;gap:15px;padding:15px 18px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-md);transition:all var(--transition);text-decoration:none;color:inherit}.clink:hover{border-color:var(--border-strong);transform:translate(6px);box-shadow:var(--shadow-md)}.clink-ico{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}.clink-ico.em{background:#ff5e9524;color:#ff5e95}.clink-ico.ph{background:#1bbf6f24;color:#1bbf6f}.clink-ico.li{background:#0ea5e924;color:#0ea5e9}.clink-ico.gh{background:#0f0f1414;color:var(--text)}[data-theme=dark] .clink-ico.gh{background:#ffffff14;color:#fff}.clink-text{flex:1;min-width:0}.clink-lbl{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-soft);margin-bottom:3px}.clink-val{font-size:.92rem;font-weight:500;color:var(--text);word-break:break-word}.clink-arr{color:var(--text-soft);font-size:.78rem;flex-shrink:0;transition:transform var(--transition),color var(--transition)}.clink:hover .clink-arr{color:var(--accent-to);transform:translate(3px)}.form-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(26px,4vw,38px);box-shadow:var(--shadow-md)}.form-ttl{font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin:0 0 24px;color:var(--text)}.form-grp{margin-bottom:18px}.form-lbl{display:block;font-size:.84rem;font-weight:600;color:var(--text-muted);margin-bottom:7px}.form-req{color:#ff5e95;margin-left:2px;font-weight:700}.form-inp,.form-ta{width:100%;background:#0f0f1e08;border:1px solid var(--border);border-radius:var(--radius-md);padding:13px 15px;font-family:var(--font-sans);font-size:.94rem;color:var(--text);outline:none;resize:none;transition:border-color var(--transition),box-shadow var(--transition),background var(--transition)}[data-theme=dark] .form-inp,[data-theme=dark] .form-ta{background:#ffffff0a}.form-inp::placeholder,.form-ta::placeholder{color:var(--text-soft);opacity:.7}.form-inp:focus,.form-ta:focus{border-color:var(--accent-to);box-shadow:0 0 0 3px #7d56e82e;background:#7d56e80a}.form-inp.err,.form-ta.err{border-color:#ff5e95}.form-inp.err:focus,.form-ta.err:focus{box-shadow:0 0 0 3px #ff5e952e}.form-ta{height:120px;min-height:90px;font-family:var(--font-sans)}.form-err{font-size:.78rem;color:#ff5e95;margin-top:6px;display:none;line-height:1.4}.form-err.show{display:block}.form-sub{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;font-size:.97rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent-from),var(--accent-to));padding:14px 28px;border-radius:var(--radius-md);border:none;cursor:pointer;transition:all var(--transition);font-family:var(--font-sans);box-shadow:0 10px 24px -10px #c75ed880}.form-sub:hover{transform:translateY(-2px);box-shadow:0 18px 36px -12px #c75ed8a6;opacity:.96}.form-sub:disabled{opacity:.6;cursor:not-allowed;transform:none}.form-ok{display:none;text-align:center;padding:14px;margin-top:14px;background:#1bbf6f1a;border:1px solid rgba(27,191,111,.3);border-radius:var(--radius-md);color:#1bbf6f;font-weight:600;font-size:.92rem;align-items:center;justify-content:center;gap:10px}.form-ok.show{display:flex}.ico{display:inline-block;vertical-align:-.18em;flex-shrink:0}@keyframes spin360{to{transform:rotate(360deg)}}.spin{animation:spin360 .8s linear infinite;transform-origin:center}@media(max-width:960px){.proj-grid{grid-template-columns:repeat(2,1fr)}.contact-wrap{grid-template-columns:1fr}}@media(max-width:600px){.proj-grid{grid-template-columns:1fr}}.footer{padding:30px 0 16px;text-align:center;color:var(--text-muted);font-size:.9rem;position:relative;z-index:1;margin-top:auto}body{display:flex;flex-direction:column;min-height:100vh}.music-wrap{position:fixed;bottom:28px;right:28px;z-index:50}.floating-btn{position:relative;width:56px;height:56px;border-radius:50%;background:var(--black);color:#fff;display:grid;place-items:center;box-shadow:0 12px 25px -6px #0f0f1466;transition:all var(--transition);cursor:pointer;border:none}.floating-btn:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 18px 35px -6px #0f0f1480}.floating-btn .m-ic{grid-area:1 / 1;transition:opacity .2s,transform .2s}.floating-btn .m-ic-eq{display:flex;align-items:flex-end;justify-content:center;gap:3px;width:22px;height:22px;opacity:0;transform:scale(.6)}.floating-btn .m-ic-eq i{display:block;width:3px;height:100%;background:currentColor;border-radius:2px;transform-origin:bottom}.floating-btn.playing .m-ic-note{opacity:0;transform:scale(.6)}.floating-btn.playing .m-ic-eq{opacity:1;transform:scale(1)}.floating-btn.playing .m-ic-eq i{animation:eqBounce 1s ease-in-out infinite}.floating-btn.playing .m-ic-eq i:nth-child(1){animation-delay:0s}.floating-btn.playing .m-ic-eq i:nth-child(2){animation-delay:.2s}.floating-btn.playing .m-ic-eq i:nth-child(3){animation-delay:.4s}.floating-btn.playing .m-ic-eq i:nth-child(4){animation-delay:.15s}@keyframes eqBounce{0%,to{transform:scaleY(.35)}50%{transform:scaleY(1)}}.floating-btn.playing{background:linear-gradient(135deg,var(--accent-from),var(--accent-to));color:#fff;box-shadow:0 0 0 4px #c75ed82e,0 12px 25px -6px #c75ed899;animation:musicBtnPulse 2.4s ease-in-out infinite}@keyframes musicBtnPulse{0%,to{box-shadow:0 0 #c75ed873,0 12px 25px -6px #c75ed899}50%{box-shadow:0 0 0 12px #c75ed800,0 12px 25px -6px #c75ed899}}[data-theme=dark] .floating-btn{background:#fff;color:#0f0f14}[data-theme=dark] .floating-btn.playing{background:linear-gradient(135deg,var(--accent-from),var(--accent-to));color:#fff}.music-pop{position:absolute;bottom:calc(100% + 12px);right:0;width:280px;background:var(--card);border:1px solid var(--border-strong);border-radius:18px;box-shadow:0 24px 60px -16px #0f0f1459;padding:14px;transform-origin:bottom right;animation:musicPopIn .22s cubic-bezier(.34,1.56,.64,1)}[data-theme=dark] .music-pop{background:var(--card);box-shadow:0 24px 60px -16px #0009}@keyframes musicPopIn{0%{opacity:0;transform:translateY(8px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}.music-pop-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.music-pop-title{font-weight:700;font-size:14px;color:var(--text)}.music-pop-close{background:transparent;border:none;color:var(--text-muted);width:26px;height:26px;border-radius:8px;cursor:pointer;display:grid;place-items:center;transition:all .2s}.music-pop-close:hover{background:var(--accent-soft);color:var(--text)}.music-list{list-style:none;margin:0 0 12px;padding:0 4px 0 0;display:flex;flex-direction:column;gap:4px;max-height:168px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(199,94,216,.45) transparent}.music-list::-webkit-scrollbar{width:6px}.music-list::-webkit-scrollbar-track{background:transparent}.music-list::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--accent-from),var(--accent-to));border-radius:4px;opacity:.6}.music-list::-webkit-scrollbar-thumb:hover{opacity:1}.music-track{width:100%;display:flex;align-items:center;gap:10px;padding:8px 10px;background:transparent;border:1px solid transparent;border-radius:12px;cursor:pointer;font:inherit;color:var(--text);text-align:left;transition:all .2s}.music-track:hover{background:var(--accent-soft);border-color:var(--border)}.music-track.active{background:linear-gradient(135deg,#ff5e951f,#7d56e81f);border-color:#c75ed859;color:var(--text)}.music-play-icon{width:26px;height:26px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;flex-shrink:0;position:relative;color:var(--accent-mid);transition:background .25s,box-shadow .25s,color .25s}.music-play-icon .play-tri{grid-area:1 / 1;transition:opacity .2s,transform .2s}.music-play-icon .play-bars{grid-area:1 / 1;width:14px;height:12px;display:flex;align-items:flex-end;justify-content:center;gap:2px;opacity:0;transform:scale(.6);transition:opacity .2s,transform .2s}.music-play-icon .play-bars i{display:block;width:2px;height:100%;background:#fff;border-radius:2px;transform-origin:bottom;animation:eqBounce 1s ease-in-out infinite paused}.music-play-icon .play-bars i:nth-child(1){animation-delay:0s}.music-play-icon .play-bars i:nth-child(2){animation-delay:.15s}.music-play-icon .play-bars i:nth-child(3){animation-delay:.3s}.music-track.active .music-play-icon{background:linear-gradient(135deg,var(--accent-from),var(--accent-to));color:#fff;box-shadow:0 4px 12px #c75ed873}.music-track.is-playing .music-play-icon .play-tri{opacity:0;transform:scale(.6)}.music-track.is-playing .music-play-icon .play-bars{opacity:1;transform:scale(1)}.music-track.is-playing .music-play-icon .play-bars i{animation-play-state:running}.music-track-name{flex:1;font-size:13px;font-weight:600}.music-track-meta{font-size:11px;color:var(--text-muted);font-variant-numeric:tabular-nums}.music-vol{display:flex;align-items:center;gap:8px;padding:8px 4px;border-top:1px solid var(--border);color:var(--text-muted)}#musicVol{flex:1;-webkit-appearance:none;appearance:none;height:4px;border-radius:999px;background:var(--border-strong);outline:none;cursor:pointer}#musicVol::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--accent-from),var(--accent-to));border:2px solid white;box-shadow:0 2px 6px #c75ed866;cursor:grab}#musicVol::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--accent-from),var(--accent-to));border:2px solid white;cursor:grab}.music-vol-val{font-size:11px;font-variant-numeric:tabular-nums;min-width:24px;text-align:right;color:var(--text)}.music-hint{font-size:11px;color:var(--text-soft);margin-top:4px;text-align:center}@media(max-width:480px){.music-pop{width:calc(100vw - 56px);right:0}}.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.215,.61,.355,1)}.reveal.visible{opacity:1;transform:translateY(0)}@media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:60px}.hero-right{min-height:auto}.about-grid{grid-template-columns:1fr}.nav-links{position:fixed;top:calc(var(--nav-height) + 8px);right:24px;left:auto;flex-direction:column;background:var(--card);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);border:1px solid var(--border);gap:16px;margin:0;transform:translate(120%);transition:transform var(--transition);min-width:220px}.nav-links.open{transform:translate(0)}.menu-toggle{display:flex}.btn-contact{display:none}}@media(max-width:640px){.section{padding:80px 0}.container{padding:0 20px}.hero-name{font-size:clamp(3rem,14vw,5.5rem)}.stats{grid-template-columns:1fr}.tech-grid{grid-template-columns:repeat(4,1fr);gap:10px}.tech-card{padding:22px}.nav{padding:0 16px}.nav-pill{padding:10px 12px 10px 20px}.nav-logo{font-size:1.05rem}.contact-card{padding:60px 24px}}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg-1)}::-webkit-scrollbar-thumb{background:linear-gradient(var(--accent-from),var(--accent-to));border-radius:5px;border:2px solid var(--bg-1)}
+</style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>" />
+</head>
+<body>
+  <!-- ============== Decorative floating 3D shapes (background) ============== -->
+  <div class="shapes" aria-hidden="true">
+    <!-- Spheres -->
+    <div class="shape sphere s-sphere-1"></div>
+    <div class="shape sphere s-sphere-2"></div>
+    <div class="shape sphere s-sphere-3"></div>
+    <div class="shape sphere s-sphere-4"></div>
+    <div class="shape sphere s-sphere-5"></div>
+
+    <!-- Cubes -->
+    <svg class="shape cube s-cube-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="cubeA" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#bda7f3"/><stop offset="100%" stop-color="#7c5ad8"/>
+        </linearGradient>
+        <linearGradient id="cubeB" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#9c80e6"/><stop offset="100%" stop-color="#5a3cb6"/>
+        </linearGradient>
+        <linearGradient id="cubeC" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#d6c6fa"/><stop offset="100%" stop-color="#9c80e6"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 92,28 92,72 50,95 8,72 8,28" fill="url(#cubeA)"/>
+      <polygon points="50,5 92,28 50,50 8,28" fill="url(#cubeC)"/>
+      <polygon points="50,50 92,28 92,72 50,95" fill="url(#cubeB)"/>
+    </svg>
+
+    <svg class="shape cube s-cube-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="cube2A" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fbd2e3"/><stop offset="100%" stop-color="#f48fb6"/>
+        </linearGradient>
+        <linearGradient id="cube2B" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#e978a6"/><stop offset="100%" stop-color="#b54a87"/>
+        </linearGradient>
+        <linearGradient id="cube2C" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fde4ee"/><stop offset="100%" stop-color="#e978a6"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 92,28 92,72 50,95 8,72 8,28" fill="url(#cube2A)"/>
+      <polygon points="50,5 92,28 50,50 8,28" fill="url(#cube2C)"/>
+      <polygon points="50,50 92,28 92,72 50,95" fill="url(#cube2B)"/>
+    </svg>
+
+    <!-- Octahedrons / pyramids -->
+    <svg class="shape octa s-octa-1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="octa1L" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#bbe5ff"/><stop offset="100%" stop-color="#69b6ec"/>
+        </linearGradient>
+        <linearGradient id="octa1R" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#5fa9e0"/><stop offset="100%" stop-color="#2d6ca8"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 95,50 50,95 5,50" fill="url(#octa1L)"/>
+      <polygon points="50,5 95,50 50,50 5,50" fill="url(#octa1R)" opacity="0.85"/>
+    </svg>
+
+    <svg class="shape octa s-octa-2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="octa2L" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fbd2e3"/><stop offset="100%" stop-color="#e978a6"/>
+        </linearGradient>
+        <linearGradient id="octa2R" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#cf5d8d"/><stop offset="100%" stop-color="#8a3a64"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 95,50 50,95 5,50" fill="url(#octa2L)"/>
+      <polygon points="50,5 95,50 50,50 5,50" fill="url(#octa2R)" opacity="0.85"/>
+    </svg>
+
+    <svg class="shape octa s-octa-3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="octa3L" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#d8c6fc"/><stop offset="100%" stop-color="#9d80f0"/>
+        </linearGradient>
+        <linearGradient id="octa3R" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#7c5dd6"/><stop offset="100%" stop-color="#4d3499"/>
+        </linearGradient>
+      </defs>
+      <polygon points="50,5 95,50 50,95 5,50" fill="url(#octa3L)"/>
+      <polygon points="50,5 95,50 50,50 5,50" fill="url(#octa3R)" opacity="0.85"/>
+    </svg>
+
+    <!-- Capsule / pill -->
+    <div class="shape capsule s-capsule-1"></div>
+    <div class="shape capsule s-capsule-2"></div>
+
+    <!-- Glass bubbles -->
+    <div class="shape bubble s-bubble-1"></div>
+    <div class="shape bubble s-bubble-2"></div>
+    <div class="shape bubble s-bubble-3"></div>
+  </div>
+
+  <!-- ============== Navigation ============== -->
+  <nav class="nav">
+    <div class="nav-pill">
+      <a href="#home" class="nav-logo">
+        XIN CHÀO<span class="dot-accent">.</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Trang chủ</a></li>
+        <li><a href="#about">Về mình</a></li>
+        <li><a href="#projects">Dự án</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="#contact" class="btn-contact">Liên hệ</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============== Hero ============== -->
+  <section id="home" class="hero">
+    <!-- Soft gradient orb behind the name (depth) -->
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span class="badge-icon">🚀</span>
+          <span>Fullstack Developer</span>
+        </div>
+
+        <h1 class="hero-name">
+          <span class="name-top">Lương</span>
+          <span class="name-bottom">
+            <span class="name-text">Senpai.</span>
+            <span class="name-shine" aria-hidden="true">Senpai.</span>
+          </span>
+        </h1>
+
+        <p class="hero-tag">
+          <span class="t-bracket">{</span>
+          <span class="t-key">turning</span>
+          <span class="t-string">"ideas"</span>
+          <span class="t-arrow">→</span>
+          <span class="t-string">"products"</span>
+          <span class="t-bracket">}</span>
+        </p>
+
+        <p class="hero-desc">
+          Tôi thiết kế trải nghiệm số. Biến những dòng code khô khan thành giao diện tương tác sống động và đầy cảm xúc.
+        </p>
+
+        <div class="hero-meta">
+          <span class="meta-chip"><span class="meta-emoji">📍</span> Việt Nam</span>
+          <span class="meta-chip"><span class="meta-emoji">⚡</span> 3+ năm KN</span>
+          <span class="meta-chip"><span class="meta-emoji">☕</span> Cà phê &amp; Code</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            <span>Xem dự án</span>
+            <span class="btn-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </span>
+          </a>
+          <a href="#contact" class="btn-ghost">
+            <span>Liên hệ</span>
+            <span class="btn-arrow-inline">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Tech Stack card -->
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div class="tech-card-title">
+              <h3>Tech Stack</h3>
+              <p>Vũ khí hạng nặng</p>
+            </div>
+            <div class="window-dots">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="tech-grid">
+            <div class="tech-icon" data-name="TypeScript" title="TypeScript"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"/><path data-name="original" fill="#007acc" d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73L82 101l3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H56.66v46.23H45.15V69.26H28.88v-5a49.19 49.19 0 01.12-5.17C29.08 59 39 59 51 59h21.83z"/></svg></div>
+            <div class="tech-icon" data-name="React" title="React"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><g fill="#61DAFB"><circle cx="64" cy="64" r="11.4"/><path d="M107.3 45.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4 1.1-4.8 1.5-7.1 2.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7 0-15.9 5.2-24.9 13.9-9-8.7-17.9-13.9-24.9-13.9-2.4 0-4.5.5-6.4 1.6-6.4 3.7-8.7 13-6.6 26.1.4 2.3.9 4.7 1.5 7.1-2.4.7-4.7 1.4-6.9 2.3C8.2 50 1.4 56.6 1.4 64s6.9 14 19.3 18.8c2.2.8 4.5 1.6 6.9 2.3-.6 2.4-1.1 4.8-1.5 7.1-2.1 13.2.2 22.5 6.6 26.1 1.9 1.1 4 1.6 6.4 1.6 7.1 0 16-5.2 24.9-13.9 9 8.7 17.9 13.9 24.9 13.9 2.4 0 4.5-.5 6.4-1.6 6.4-3.7 8.7-13 6.6-26.1-.4-2.3-.9-4.7-1.5-7.1 2.4-.7 4.7-1.4 6.9-2.3 12.5-4.8 19.3-11.4 19.3-18.8s-6.8-14-19.3-18.8zM92.5 14.7c4.1 2.4 5.5 9.8 3.8 20.3-.3 2.1-.8 4.3-1.4 6.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13 7.4-7.3 14.9-12.3 21-12.3 1.3 0 2.5.3 3.5.9zM81.3 74c-1.8 3.2-3.9 6.4-6.1 9.6-3.7.3-7.4.4-11.2.4-3.9 0-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10 1.6-3.3 3.4-6.7 5.3-10 1.8-3.2 3.9-6.4 6.1-9.6 3.7-.3 7.4-.4 11.2-.4 3.9 0 7.6.1 11.2.4 2.2 3.2 4.2 6.4 6 9.6 1.9 3.3 3.7 6.7 5.3 10-1.7 3.3-3.4 6.6-5.3 10zm8.3-3.3c1.5 3.5 2.7 6.9 3.8 10.3-3.4.8-7 1.4-10.8 1.9 1.2-1.9 2.5-3.9 3.6-6 1.2-2.1 2.3-4.2 3.4-6.2zM64 97.8c-2.4-2.6-4.7-5.4-6.9-8.3 2.3.1 4.6.2 6.9.2 2.3 0 4.6-.1 6.9-.2-2.2 2.9-4.5 5.7-6.9 8.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9 1.1-3.3 2.3-6.8 3.8-10.3 1.1 2 2.2 4.1 3.4 6.1 1.2 2.2 2.4 4.1 3.6 6.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3 3.4-.8 7-1.4 10.8-1.9-1.2 1.9-2.5 3.9-3.6 6-1.2 2.1-2.3 4.2-3.4 6.2zM64 30.2c2.4 2.6 4.7 5.4 6.9 8.3-2.3-.1-4.6-.2-6.9-.2-2.3 0-4.6.1-6.9.2 2.2-2.9 4.5-5.7 6.9-8.3zm22.2 21l-3.6-6c3.8.5 7.4 1.1 10.8 1.9-1.1 3.3-2.3 6.8-3.8 10.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7 35c-1.7-10.5-.3-17.9 3.8-20.3 1-.6 2.2-.9 3.5-.9 6 0 13.5 4.9 21 12.3-3.5 3.8-7 8.2-10.4 13-5.8.5-11.3 1.4-16.5 2.5-.6-2.3-1-4.5-1.4-6.6zM7 64c0-4.7 5.7-9.7 15.7-13.4 2-.8 4.2-1.5 6.4-2.1 1.6 5 3.6 10.3 6 15.6-2.4 5.3-4.5 10.5-6 15.5C15.3 75.6 7 69.6 7 64zm28.5 49.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3 1.4-6.6 5.2 1.2 10.7 2 16.5 2.5 3.4 4.8 6.9 9.1 10.4 13-7.4 7.3-14.9 12.3-21 12.3-1.3 0-2.5-.3-3.5-.9zM96.3 93c1.7 10.5.3 17.9-3.8 20.3-1 .6-2.2.9-3.5.9-6 0-13.5-4.9-21-12.3 3.5-3.8 7-8.2 10.4-13 5.8-.5 11.3-1.4 16.5-2.5.6 2.3 1 4.5 1.4 6.6zm9-15.6c-2 .8-4.2 1.5-6.4 2.1-1.6-5-3.6-10.3-6-15.6 2.4-5.3 4.5-10.5 6-15.5 13.8 4 22.1 10 22.1 15.6 0 4.7-5.8 9.7-15.7 13.4z"/></g></svg></div>
+            <div class="tech-icon" data-name="JavaScript" title="JavaScript"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"/><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"/></svg></div>
+            <div class="tech-icon" data-name="MongoDB" title="MongoDB"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill-rule="evenodd" clip-rule="evenodd" fill="#439934" d="M88.038 42.812c1.605 4.643 2.761 9.383 3.141 14.296.472 6.095.256 12.147-1.029 18.142-.035.165-.109.32-.164.48-.403.001-.814-.049-1.208.012-3.329.523-6.655 1.065-9.981 1.604-3.438.557-6.881 1.092-10.313 1.687-1.216.21-2.721-.041-3.212 1.641-.014.046-.154.054-.235.08l.166-10.051-.169-24.252 1.602-.275c2.62-.429 5.24-.864 7.862-1.281 3.129-.497 6.261-.98 9.392-1.465 1.381-.215 2.764-.412 4.148-.618z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#45A538" d="M61.729 110.054c-1.69-1.453-3.439-2.842-5.059-4.37-8.717-8.222-15.093-17.899-18.233-29.566-.865-3.211-1.442-6.474-1.627-9.792-.13-2.322-.318-4.665-.154-6.975.437-6.144 1.325-12.229 3.127-18.147l.099-.138c.175.233.427.439.516.702 1.759 5.18 3.505 10.364 5.242 15.551 5.458 16.3 10.909 32.604 16.376 48.9.107.318.384.579.583.866l-.87 2.969z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#46A037" d="M88.038 42.812c-1.384.206-2.768.403-4.149.616-3.131.485-6.263.968-9.392 1.465-2.622.417-5.242.852-7.862 1.281l-1.602.275-.012-1.045c-.053-.859-.144-1.717-.154-2.576-.069-5.478-.112-10.956-.18-16.434-.042-3.429-.105-6.857-.175-10.285-.043-2.13-.089-4.261-.185-6.388-.052-1.143-.236-2.28-.311-3.423-.042-.657.016-1.319.029-1.979.817 1.583 1.616 3.178 2.456 4.749 1.327 2.484 3.441 4.314 5.344 6.311 7.523 7.892 12.864 17.068 16.193 27.433z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#409433" d="M65.036 80.753c.081-.026.222-.034.235-.08.491-1.682 1.996-1.431 3.212-1.641 3.432-.594 6.875-1.13 10.313-1.687 3.326-.539 6.652-1.081 9.981-1.604.394-.062.805-.011 1.208-.012-.622 2.22-1.112 4.488-1.901 6.647-.896 2.449-1.98 4.839-3.131 7.182a49.142 49.142 0 01-6.353 9.763c-1.919 2.308-4.058 4.441-6.202 6.548-1.185 1.165-2.582 2.114-3.882 3.161l-.337-.23-1.214-1.038-1.256-2.753a41.402 41.402 0 01-1.394-9.838l.023-.561.171-2.426c.057-.828.133-1.655.168-2.485.129-2.982.241-5.964.359-8.946z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#4FAA41" d="M65.036 80.753c-.118 2.982-.23 5.964-.357 8.947-.035.83-.111 1.657-.168 2.485l-.765.289c-1.699-5.002-3.399-9.951-5.062-14.913-2.75-8.209-5.467-16.431-8.213-24.642a4498.887 4498.887 0 00-6.7-19.867c-.105-.31-.407-.552-.617-.826l4.896-9.002c.168.292.39.565.496.879a6167.476 6167.476 0 016.768 20.118c2.916 8.73 5.814 17.467 8.728 26.198.116.349.308.671.491 1.062l.67-.78-.167 10.052z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#4AA73C" d="M43.155 32.227c.21.274.511.516.617.826a4498.887 4498.887 0 016.7 19.867c2.746 8.211 5.463 16.433 8.213 24.642 1.662 4.961 3.362 9.911 5.062 14.913l.765-.289-.171 2.426-.155.559c-.266 2.656-.49 5.318-.814 7.968-.163 1.328-.509 2.632-.772 3.947-.198-.287-.476-.548-.583-.866-5.467-16.297-10.918-32.6-16.376-48.9a3888.972 3888.972 0 00-5.242-15.551c-.089-.263-.34-.469-.516-.702l3.272-8.84z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#57AE47" d="M65.202 70.702l-.67.78c-.183-.391-.375-.714-.491-1.062-2.913-8.731-5.812-17.468-8.728-26.198a6167.476 6167.476 0 00-6.768-20.118c-.105-.314-.327-.588-.496-.879l6.055-7.965c.191.255.463.482.562.769 1.681 4.921 3.347 9.848 5.003 14.778 1.547 4.604 3.071 9.215 4.636 13.813.105.308.47.526.714.786l.012 1.045c.058 8.082.115 16.167.171 24.251z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#60B24F" d="M65.021 45.404c-.244-.26-.609-.478-.714-.786-1.565-4.598-3.089-9.209-4.636-13.813-1.656-4.93-3.322-9.856-5.003-14.778-.099-.287-.371-.514-.562-.769 1.969-1.928 3.877-3.925 5.925-5.764 1.821-1.634 3.285-3.386 3.352-5.968.003-.107.059-.214.145-.514l.519 1.306c-.013.661-.072 1.322-.029 1.979.075 1.143.259 2.28.311 3.423.096 2.127.142 4.258.185 6.388.069 3.428.132 6.856.175 10.285.067 5.478.111 10.956.18 16.434.008.861.098 1.718.152 2.577z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#A9AA88" d="M62.598 107.085c.263-1.315.609-2.62.772-3.947.325-2.649.548-5.312.814-7.968l.066-.01.066.011a41.402 41.402 0 001.394 9.838c-.176.232-.425.439-.518.701-.727 2.05-1.412 4.116-2.143 6.166-.1.28-.378.498-.574.744l-.747-2.566.87-2.969z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#B6B598" d="M62.476 112.621c.196-.246.475-.464.574-.744.731-2.05 1.417-4.115 2.143-6.166.093-.262.341-.469.518-.701l1.255 2.754c-.248.352-.59.669-.728 1.061l-2.404 7.059c-.099.283-.437.483-.663.722l-.695-3.985z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C1A7" d="M63.171 116.605c.227-.238.564-.439.663-.722l2.404-7.059c.137-.391.48-.709.728-1.061l1.215 1.037c-.587.58-.913 1.25-.717 2.097l-.369 1.208c-.168.207-.411.387-.494.624-.839 2.403-1.64 4.819-2.485 7.222-.107.305-.404.544-.614.812-.109-1.387-.22-2.771-.331-4.158z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#CECDB7" d="M63.503 120.763c.209-.269.506-.508.614-.812.845-2.402 1.646-4.818 2.485-7.222.083-.236.325-.417.494-.624l-.509 5.545c-.136.157-.333.294-.398.477-.575 1.614-1.117 3.24-1.694 4.854-.119.333-.347.627-.525.938-.158-.207-.441-.407-.454-.623-.051-.841-.016-1.688-.013-2.533z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#DBDAC7" d="M63.969 123.919c.178-.312.406-.606.525-.938.578-1.613 1.119-3.239 1.694-4.854.065-.183.263-.319.398-.477l.012 3.64-1.218 3.124-1.411-.495z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#EBE9DC" d="M65.38 124.415l1.218-3.124.251 3.696-1.469-.572z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#CECDB7" d="M67.464 110.898c-.196-.847.129-1.518.717-2.097l.337.23-1.054 1.867z"/><path fill-rule="evenodd" clip-rule="evenodd" fill="#4FAA41" d="M64.316 95.172l-.066-.011-.066.01.155-.559-.023.56z"/></svg></div>
+            <div class="tech-icon" data-name="Python" title="Python"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"/><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"/><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"/><stop offset="1" stop-color="#7F7F7F" stop-opacity="0"/></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z"/></svg></div>
+            <div class="tech-icon" data-name="Git" title="Git"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#F34F29" d="M124.737 58.378L69.621 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.68 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00-.001-11.501z"/></svg></div>
+            <div class="tech-icon" data-name="Node.js" title="Node.js"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="url(#a)" d="M66.958.825a6.07 6.07 0 0 0-6.035 0L11.103 29.76c-1.895 1.072-2.96 3.095-2.96 5.24v57.988c0 2.143 1.183 4.167 2.958 5.24l49.82 28.934a6.07 6.07 0 0 0 6.036 0l49.82-28.935c1.894-1.072 2.958-3.096 2.958-5.24V35c0-2.144-1.183-4.167-2.958-5.24z"/><path fill="url(#b)" d="M116.897 29.76 66.841.825A8.161 8.161 0 0 0 65.302.23L9.21 96.798a6.251 6.251 0 0 0 1.657 1.43l50.057 28.934c1.42.833 3.076 1.072 4.615.595l52.66-96.925a3.702 3.702 0 0 0-1.302-1.072z"/><path fill="url(#c)" d="M116.898 98.225c1.42-.833 2.485-2.262 2.958-3.81L65.066.108c-1.42-.238-2.959-.119-4.26.715L11.104 29.639l53.606 98.355c.71-.12 1.54-.358 2.25-.715z"/><defs><linearGradient id="a" x1="34.513" x2="27.157" y1="15.535" y2="30.448" gradientTransform="translate(-129.242 -73.715) scale(6.18523)" gradientUnits="userSpaceOnUse"><stop stop-color="#3F873F"/><stop offset=".33" stop-color="#3F8B3D"/><stop offset=".637" stop-color="#3E9638"/><stop offset=".934" stop-color="#3DA92E"/><stop offset="1" stop-color="#3DAE2B"/></linearGradient><linearGradient id="b" x1="30.009" x2="50.533" y1="23.359" y2="8.288" gradientTransform="translate(-129.242 -73.715) scale(6.18523)" gradientUnits="userSpaceOnUse"><stop offset=".138" stop-color="#3F873F"/><stop offset=".402" stop-color="#52A044"/><stop offset=".713" stop-color="#64B749"/><stop offset=".908" stop-color="#6ABF4B"/></linearGradient><linearGradient id="c" x1="21.917" x2="40.555" y1="22.261" y2="22.261" gradientTransform="translate(-129.242 -73.715) scale(6.18523)" gradientUnits="userSpaceOnUse"><stop offset=".092" stop-color="#6ABF4B"/><stop offset=".287" stop-color="#64B749"/><stop offset=".598" stop-color="#52A044"/><stop offset=".862" stop-color="#3F873F"/></linearGradient></defs></svg></div>
+            <div class="tech-icon" data-name="Tailwind" title="Tailwind"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0" fill="#38bdf8"/></svg></div>
+          </div>
+        </div>
+
+        <!-- Status badge - live pulse -->
+        <div class="status-card">
+          <div class="status-pulse" aria-hidden="true">
+            <span class="pulse-ring"></span>
+            <span class="pulse-dot"></span>
+          </div>
+          <div class="status-text">
+            <small>SẴN SÀNG NHẬN VIỆC</small>
+            <strong>Available now</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll-down indicator -->
+    <a href="#about" class="scroll-down" aria-label="Cuộn xuống">
+      <span class="scroll-mouse" aria-hidden="true">
+        <span class="scroll-wheel"></span>
+      </span>
+      <span class="scroll-label">Cuộn xuống</span>
+    </a>
+  </section>
+
+  <!-- ============== About ============== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">01 — Về mình</span>
+        <h2 class="section-heading">Một developer luôn <span class="text-grad">tò mò</span> và yêu cái đẹp.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Xin chào! Mình là <strong>Lương</strong>, một developer đam mê công nghệ và không ngừng học hỏi. Mình tin rằng một sản phẩm tốt không chỉ chạy được — mà còn phải đẹp, dễ dùng và mang lại cảm xúc cho người dùng.</p>
+          <p>Hiện mình đang tập trung vào <strong>web full-stack</strong>: từ giao diện mượt mà, hiệu năng cao, đến backend ổn định và mở rộng được. Ngoài giờ làm, mình thích đọc sách, nghe nhạc và khám phá các công nghệ mới.</p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>3+</strong>
+              <span>Năm kinh nghiệm</span>
+            </div>
+            <div class="stat">
+              <strong>20+</strong>
+              <span>Dự án đã làm</span>
+            </div>
+            <div class="stat">
+              <strong>15+</strong>
+              <span>Công nghệ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <div class="ava-wrap" role="img" aria-label="Ảnh đại diện của Nguyễn Thế Lương">
+            <div class="ava-ring" aria-hidden="true"></div>
+            <div class="ava-img" aria-hidden="true">
+              <svg width="84" height="84" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="ava-status" role="status">
+            <span class="sdot" aria-hidden="true"></span>
+            Đang mở nhận dự án
+          </div>
+          <h4>Nguyễn Thế Lương</h4>
+          <p class="role">Fullstack Developer</p>
+          <ul class="info-list">
+            <li><span>📍</span>Việt Nam</li>
+            <li><span>✉️</span>lucifermeta0210@gmail.com</li>
+            <li><span>💼</span>Đang nhận freelance &amp; full-time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Skills ============== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">02 — Kỹ năng</span>
+        <h2 class="section-heading">Bộ <span class="text-grad">vũ khí</span> mình mang theo.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-icon-wrap"><span>💻</span></div>
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS, Framer Motion.</p>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon-wrap"><span>⚙️</span></div>
+          <h3>Backend</h3>
+          <p>Node.js, Express, NestJS, Python, FastAPI, REST API, GraphQL, WebSocket.</p>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon-wrap"><span>🗄️</span></div>
+          <h3>Database</h3>
+          <p>PostgreSQL, MySQL, MongoDB, Redis, Prisma, Drizzle ORM.</p>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon-wrap"><span>☁️</span></div>
+          <h3>DevOps</h3>
+          <p>Docker, Git, GitHub Actions, AWS, Vercel, CI/CD, Linux.</p>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon-wrap"><span>🎨</span></div>
+          <h3>Design</h3>
+          <p>Figma, UI/UX cơ bản, Responsive Design, Design System.</p>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon-wrap"><span>🛠️</span></div>
+          <h3>Tools</h3>
+          <p>VS Code, Postman, Notion, Slack, Jira, Linear.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Projects ============== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">03 — Dự án</span>
+        <h2 class="section-heading">Những gì tôi đã <span class="text-grad">xây dựng</span>.</h2>
+        <p class="section-sub">Một số dự án nổi bật thể hiện kỹ năng và đam mê của tôi.</p>
+      </div>
+
+      <div class="proj-grid">
+        <article class="proj-card">
+          <div class="proj-thumb tb-1" role="img" aria-label="Nền tảng Thương mại điện tử">
+            <div class="proj-thumb-bg" aria-hidden="true">🛒</div>
+            <div class="proj-thumb-ov" aria-hidden="true"></div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Nền tảng Thương mại điện tử</h3>
+            <p class="proj-desc">Giải pháp mua sắm trực tuyến toàn diện với thanh toán tích hợp, quản lý kho hàng thời gian thực và phân tích dữ liệu nâng cao.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">PostgreSQL</span>
+              <span class="proj-tag">Redis</span>
+            </div>
+            <div class="proj-acts">
+              <a href="#" target="_blank" rel="noopener" class="pbtn pri"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> Live Demo</a>
+              <a href="#" target="_blank" rel="noopener" class="pbtn out"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.806 5.625-5.48 5.92.43.37.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.697.825.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-thumb tb-2" role="img" aria-label="Ứng dụng Quản lý Công việc">
+            <div class="proj-thumb-bg" aria-hidden="true">📋</div>
+            <div class="proj-thumb-ov" aria-hidden="true"></div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Ứng dụng Quản lý Công việc</h3>
+            <p class="proj-desc">Công cụ quản lý dự án theo phương pháp Kanban với tính năng cộng tác nhóm thời gian thực và theo dõi tiến độ trực quan.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Next.js</span>
+              <span class="proj-tag">Socket.IO</span>
+              <span class="proj-tag">MongoDB</span>
+              <span class="proj-tag">TypeScript</span>
+            </div>
+            <div class="proj-acts">
+              <a href="#" target="_blank" rel="noopener" class="pbtn pri"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> Live Demo</a>
+              <a href="#" target="_blank" rel="noopener" class="pbtn out"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.806 5.625-5.48 5.92.43.37.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.697.825.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-thumb tb-3" role="img" aria-label="Dashboard Phân tích Dữ liệu">
+            <div class="proj-thumb-bg" aria-hidden="true">📊</div>
+            <div class="proj-thumb-ov" aria-hidden="true"></div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Dashboard Phân tích Dữ liệu</h3>
+            <p class="proj-desc">Bảng điều khiển thống kê tương tác với biểu đồ động, bộ lọc nâng cao và xuất báo cáo tự động theo lịch trình.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">D3.js</span>
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">FastAPI</span>
+            </div>
+            <div class="proj-acts">
+              <a href="#" target="_blank" rel="noopener" class="pbtn pri"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> Live Demo</a>
+              <a href="#" target="_blank" rel="noopener" class="pbtn out"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.806 5.625-5.48 5.92.43.37.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.697.825.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-thumb tb-4" role="img" aria-label="Hệ thống Đặt phòng Khách sạn">
+            <div class="proj-thumb-bg" aria-hidden="true">🏨</div>
+            <div class="proj-thumb-ov" aria-hidden="true"></div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Hệ thống Đặt phòng Khách sạn</h3>
+            <p class="proj-desc">Nền tảng đặt phòng trực tuyến với thanh toán đa cổng, quản lý lịch đặt và hệ thống đánh giá thông minh.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Vue.js</span>
+              <span class="proj-tag">Laravel</span>
+              <span class="proj-tag">MySQL</span>
+              <span class="proj-tag">Stripe</span>
+            </div>
+            <div class="proj-acts">
+              <a href="#" target="_blank" rel="noopener" class="pbtn pri"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> Live Demo</a>
+              <a href="#" target="_blank" rel="noopener" class="pbtn out"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.806 5.625-5.48 5.92.43.37.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.697.825.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-thumb tb-5" role="img" aria-label="Mạng xã hội Học tập">
+            <div class="proj-thumb-bg" aria-hidden="true">🎓</div>
+            <div class="proj-thumb-ov" aria-hidden="true"></div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Mạng xã hội Học tập</h3>
+            <p class="proj-desc">Nền tảng học tập kết hợp mạng xã hội với trao đổi kiến thức, mentor matching và theo dõi tiến trình học cá nhân hoá.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">GraphQL</span>
+              <span class="proj-tag">AWS</span>
+              <span class="proj-tag">Docker</span>
+            </div>
+            <div class="proj-acts">
+              <a href="#" target="_blank" rel="noopener" class="pbtn pri"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> Live Demo</a>
+              <a href="#" target="_blank" rel="noopener" class="pbtn out"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.806 5.625-5.48 5.92.43.37.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.697.825.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-thumb tb-6" role="img" aria-label="Chatbot Hỗ trợ Khách hàng">
+            <div class="proj-thumb-bg" aria-hidden="true">🤖</div>
+            <div class="proj-thumb-ov" aria-hidden="true"></div>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Chatbot Hỗ trợ Khách hàng</h3>
+            <p class="proj-desc">Giải pháp chatbot AI tích hợp GPT-4 với khả năng học ngữ cảnh, đa ngôn ngữ và tích hợp liền mạch vào website hiện có.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">OpenAI</span>
+              <span class="proj-tag">Redis</span>
+              <span class="proj-tag">WebSocket</span>
+            </div>
+            <div class="proj-acts">
+              <a href="#" target="_blank" rel="noopener" class="pbtn pri"><svg class="ico" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> Live Demo</a>
+              <a href="#" target="_blank" rel="noopener" class="pbtn out"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.806 5.625-5.48 5.92.43.37.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.697.825.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Contact ============== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">04 — Liên hệ</span>
+        <h2 class="section-heading">Hãy <span class="text-grad">cùng hợp tác</span>.</h2>
+        <p class="section-sub">Mình luôn sẵn sàng lắng nghe về dự án mới của bạn.</p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <h3 class="contact-info-title">Kết nối với mình</h3>
+          <p class="contact-info-desc">Dù bạn có dự án cần triển khai, câu hỏi kỹ thuật, hay chỉ muốn chào hỏi — hòm thư của mình luôn rộng mở.</p>
+          <div class="clinks" role="list">
+            <a href="mailto:lucifermeta0210@gmail.com" class="clink" role="listitem" aria-label="Email lucifermeta0210@gmail.com">
+              <div class="clink-ico em" aria-hidden="true"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+              <div class="clink-text">
+                <div class="clink-lbl">Email</div>
+                <div class="clink-val">lucifermeta0210@gmail.com</div>
+              </div>
+              <svg class="clink-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="tel:+84901234567" class="clink" role="listitem" aria-label="Gọi +84 90 123 4567">
+              <div class="clink-ico ph" aria-hidden="true"><svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+              <div class="clink-text">
+                <div class="clink-lbl">Điện thoại</div>
+                <div class="clink-val">+84 90 123 4567</div>
+              </div>
+              <svg class="clink-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="clink" role="listitem" aria-label="LinkedIn (mở tab mới)">
+              <div class="clink-ico li" aria-hidden="true"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <div class="clink-text">
+                <div class="clink-lbl">LinkedIn</div>
+                <div class="clink-val">linkedin.com/in/luongkun</div>
+              </div>
+              <svg class="clink-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="https://github.com/luongkun" target="_blank" rel="noopener noreferrer" class="clink" role="listitem" aria-label="GitHub (mở tab mới)">
+              <div class="clink-ico gh" aria-hidden="true"><svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.807 1.305 3.492.998.108-.776.42-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.467-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.984-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.653.243 2.873.12 3.176.77.84 1.234 1.91 1.234 3.22 0 4.61-2.806 5.625-5.48 5.92.43.37.814 1.102.814 2.222 0 1.604-.014 2.896-.014 3.286 0 .322.216.697.825.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+              <div class="clink-text">
+                <div class="clink-lbl">GitHub</div>
+                <div class="clink-val">github.com/luongkun</div>
+              </div>
+              <svg class="clink-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="form-wrap">
+          <h3 class="form-ttl">Gửi tin nhắn</h3>
+          <form id="cform" novalidate aria-label="Form liên hệ">
+            <div class="form-grp">
+              <label for="f-name" class="form-lbl">Họ và tên <span aria-hidden="true" class="form-req">*</span></label>
+              <input type="text" id="f-name" name="name" class="form-inp" placeholder="Nguyễn Thế Lương"
+                     autocomplete="name" aria-required="true" aria-describedby="e-name" />
+              <p class="form-err" id="e-name" role="alert">Vui lòng nhập họ và tên.</p>
+            </div>
+            <div class="form-grp">
+              <label for="f-email" class="form-lbl">Email <span aria-hidden="true" class="form-req">*</span></label>
+              <input type="email" id="f-email" name="email" class="form-inp" placeholder="email@example.com"
+                     autocomplete="email" aria-required="true" aria-describedby="e-email" />
+              <p class="form-err" id="e-email" role="alert">Vui lòng nhập địa chỉ email hợp lệ.</p>
+            </div>
+            <div class="form-grp">
+              <label for="f-msg" class="form-lbl">Nội dung <span aria-hidden="true" class="form-req">*</span></label>
+              <textarea id="f-msg" name="message" class="form-ta" placeholder="Mô tả dự án hoặc câu hỏi của bạn..."
+                        aria-required="true" aria-describedby="e-msg"></textarea>
+              <p class="form-err" id="e-msg" role="alert">Vui lòng nhập nội dung tin nhắn.</p>
+            </div>
+            <button type="submit" class="form-sub">
+              <svg class="ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+              Gửi tin nhắn
+            </button>
+            <div class="form-ok" id="form-ok" role="status" aria-live="polite">
+              <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 9"/></svg>
+              Cảm ơn bạn! Mình sẽ phản hồi trong vòng 24 giờ.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== Footer ============== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>© <span id="year"></span> · Made with 💖 by Lương Senpai</p>
+    </div>
+  </footer>
+
+  <!-- Floating music button + popover -->
+  <div class="music-wrap">
+    <div class="music-pop" id="musicPop" hidden>
+      <div class="music-pop-head">
+        <span class="music-pop-title">🎵 Nhạc nền</span>
+        <button class="music-pop-close" id="musicPopClose" aria-label="Đóng">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <ul class="music-list" id="musicList">
+        <li><button type="button" class="music-track" data-src="em-nhac-anh.mp3" data-name="Em Nhắc Anh">
+          <span class="music-play-icon">
+            <svg class="play-tri" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><path d="M2 1.2v7.6a.5.5 0 0 0 .77.42l6.06-3.8a.5.5 0 0 0 0-.84L2.77.78A.5.5 0 0 0 2 1.2z"/></svg>
+            <span class="play-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+          </span>
+          <span class="music-track-name">Em Nhắc Anh</span><span class="music-track-meta">0:22</span>
+        </button></li>
+      </ul>
+      <div class="music-vol">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        <input type="range" id="musicVol" min="0" max="100" value="40" aria-label="Âm lượng" />
+        <span class="music-vol-val" id="musicVolVal">40</span>
+      </div>
+      <p class="music-hint">Bấm vào tên bài để phát.</p>
+    </div>
+    <button class="floating-btn" id="musicBtn" aria-label="Mở/đóng trình phát nhạc" aria-expanded="false">
+      <svg class="m-ic m-ic-note" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+      <span class="m-ic m-ic-eq" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </span>
+    </button>
+    <audio id="bgAudio" loop preload="none"></audio>
+  </div>
+
+  <script>(()=>{"use strict";const P=document.getElementById("themeToggle"),p=document.documentElement,b="portfolio-theme",M=localStorage.getItem(b),Y=window.matchMedia("(prefers-color-scheme: dark)").matches;(M||(Y?"dark":"light"))==="dark"&&p.setAttribute("data-theme","dark"),P?.addEventListener("click",()=>{p.getAttribute("data-theme")==="dark"?(p.removeAttribute("data-theme"),localStorage.setItem(b,"light")):(p.setAttribute("data-theme","dark"),localStorage.setItem(b,"dark"))});const f=document.getElementById("menuToggle"),g=document.querySelector(".nav-links");f?.addEventListener("click",t=>{t.stopPropagation(),f.classList.toggle("active"),g?.classList.toggle("open")}),g?.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{f?.classList.remove("active"),g.classList.remove("open")})}),document.addEventListener("click",t=>{g?.classList.contains("open")&&!g.contains(t.target)&&!f?.contains(t.target)&&(f?.classList.remove("active"),g.classList.remove("open"))});const A=document.querySelectorAll(".section-head, .about-text, .about-card, .skill-card, .project-card, .proj-card, .stat, .tech-card, .status-card, .hero-badge, .hero-name, .hero-desc, .btn-primary, .contact-card, .contact-info, .form-wrap");A.forEach(t=>t.classList.add("reveal"));const B=new IntersectionObserver(t=>{t.forEach((s,o)=>{s.isIntersecting&&(setTimeout(()=>s.target.classList.add("visible"),o*60),B.unobserve(s.target))})},{threshold:.1,rootMargin:"0px 0px -40px 0px"});A.forEach(t=>B.observe(t));const x=document.getElementById("year");x&&(x.textContent=String(new Date().getFullYear()));const u=document.getElementById("musicBtn"),l=document.getElementById("musicPop"),V=document.getElementById("musicPopClose"),a=document.getElementById("bgAudio"),I=document.querySelectorAll(".music-track"),y=document.getElementById("musicVol"),E=document.getElementById("musicVolVal"),q="portfolio-music-vol",$="portfolio-music-track";if(u&&a){const t=parseInt(localStorage.getItem(q)||"40",10);a.volume=Math.max(0,Math.min(1,t/100)),y&&(y.value=String(t)),E&&(E.textContent=String(t));const s=e=>{I.forEach(n=>{n.classList.remove("active"),n.classList.remove("is-playing")}),e?.classList.add("active")},o=()=>{l&&(l.hidden=!1,u.setAttribute("aria-expanded","true"))},r=()=>{l&&(l.hidden=!0,u.setAttribute("aria-expanded","false"))},d=()=>l?.hidden?o():r();u.addEventListener("click",e=>{e.stopPropagation(),d()}),V?.addEventListener("click",r),document.addEventListener("click",e=>{!l||l.hidden||!l.contains(e.target)&&!u.contains(e.target)&&r()}),I.forEach(e=>{e.addEventListener("click",()=>{const n=e.getAttribute("data-src");if(!n)return;if(e.classList.contains("active")&&!a.paused){a.pause();return}a.src!==n&&(a.src=n),a.play().catch(w=>{console.warn("Audio play failed:",w),alert("Kh\xF4ng th\u1EC3 ph\xE1t nh\u1EA1c. C\xF3 th\u1EC3 tr\xECnh duy\u1EC7t ch\u1EB7n autoplay ho\u1EB7c link nh\u1EA1c b\u1ECB l\u1ED7i.")}),s(e),localStorage.setItem($,e.getAttribute("data-name")||"")})});const m=()=>{u.classList.add("playing"),document.querySelector(".music-track.active")?.classList.add("is-playing")},c=()=>{u.classList.remove("playing"),I.forEach(e=>e.classList.remove("is-playing"))};a.addEventListener("play",m),a.addEventListener("pause",c),a.addEventListener("ended",c),y?.addEventListener("input",()=>{const e=parseInt(y.value,10);a.volume=e/100,E&&(E.textContent=String(e)),localStorage.setItem(q,String(e))})}const S=document.querySelector(".shapes"),L=document.querySelectorAll(".shape"),v=document.getElementById("home")||document.querySelector(".hero");let C=!0;if(S&&v&&"IntersectionObserver"in window&&new IntersectionObserver(s=>{s.forEach(o=>{C=o.isIntersecting,S.style.animationPlayState=o.isIntersecting?"running":"paused",L.forEach(r=>{r.style.animationPlayState=o.isIntersecting?"running":"paused"}),S.style.visibility=o.isIntersecting?"visible":"hidden"})},{threshold:0}).observe(v),L.length){let t=0,s=0,o=0,r=0,d=!1;const m=Array.from(L).map((e,n)=>(n%5+1)*3),c=()=>{o+=(t-o)*.08,r+=(s-r)*.08,L.forEach((e,n)=>{e.style.translate=`${o*m[n]}px ${r*m[n]}px`}),Math.abs(t-o)>.05||Math.abs(s-r)>.05?requestAnimationFrame(c):d=!1};window.addEventListener("mousemove",e=>{C&&(t=(e.clientX/window.innerWidth-.5)*2,s=(e.clientY/window.innerHeight-.5)*2,d||(d=!0,requestAnimationFrame(c)))},{passive:!0})}const T=document.querySelector(".hero-glow");T&&v&&v.addEventListener("mousemove",t=>{const s=v.getBoundingClientRect(),o=(t.clientX-s.left)/s.width*100,r=(t.clientY-s.top)/s.height*100;T.style.background=`radial-gradient(circle at ${o}% ${r}%, rgba(255,94,149,0.32) 0%, rgba(199,94,216,0.20) 30%, rgba(125,86,232,0.14) 55%, transparent 75%)`},{passive:!0});const h=document.querySelector(".tech-card");h&&(h.addEventListener("mousemove",t=>{const s=h.getBoundingClientRect(),o=(t.clientX-s.left)/s.width-.5,r=(t.clientY-s.top)/s.height-.5;h.style.transform=`perspective(900px) rotateY(${o*6}deg) rotateX(${-r*6}deg) translateY(-4px)`}),h.addEventListener("mouseleave",()=>{h.style.transform=""})),document.querySelectorAll(".tech-icon").forEach(t=>{t.addEventListener("mouseenter",()=>{const s=t.querySelector("svg, img");s&&(s.style.animation="none",s.offsetWidth,s.style.animation="")})});const k=document.getElementById("cform");if(k){const t=document.getElementById("f-name"),s=document.getElementById("f-email"),o=document.getElementById("f-msg"),r=document.getElementById("form-ok"),d=/^[^\s@]+@[^\s@]+\.[^\s@]+$/,m=(e,n)=>{e.classList.add("err");const i=document.getElementById(n);i&&i.classList.add("show")},c=(e,n)=>{e.classList.remove("err");const i=document.getElementById(n);i&&i.classList.remove("show")};[t,s,o].forEach(e=>{e&&e.addEventListener("input",()=>{const n=e.getAttribute("aria-describedby");e===s?d.test(e.value.trim())&&c(e,n):e.value.trim()&&c(e,n)})}),k.addEventListener("submit",e=>{e.preventDefault();let n=!0;if(t.value.trim()?c(t,"e-name"):(m(t,"e-name"),n=!1),d.test(s.value.trim())?c(s,"e-email"):(m(s,"e-email"),n=!1),o.value.trim()?c(o,"e-msg"):(m(o,"e-msg"),n=!1),!n)return;const i=k.querySelector(".form-sub");if(!i)return;const w=i.innerHTML;i.disabled=!0,i.innerHTML='<svg class="ico spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> \u0110ang g\u1EEDi\u2026',setTimeout(()=>{k.reset(),i.disabled=!1,i.innerHTML=w,r&&(r.classList.add("show"),setTimeout(()=>r.classList.remove("show"),5e3))},1100)})}})();
+</script>
+</body>
+</html>
