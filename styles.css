@@ -2589,6 +2589,12 @@ body {
     padding: 60px 24px;
   }
 
+  .hero-right {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+  }
+
   .status-card {
     position: static;
     bottom: auto;
