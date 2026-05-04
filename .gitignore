@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 styles.min.css
 script.min.js
+favicons/
