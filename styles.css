@@ -2588,6 +2588,20 @@ body {
   .contact-card {
     padding: 60px 24px;
   }
+
+  .status-card {
+    position: static;
+    bottom: auto;
+    left: auto;
+    transform: rotate(0deg);
+    margin: 18px auto 0;
+    width: max-content;
+    max-width: 100%;
+  }
+
+  .status-card:hover {
+    transform: rotate(0deg) translateY(-2px);
+  }
 }
 
 @media (max-width: 480px) {
