@@ -1895,7 +1895,7 @@ button {
 
 .clink-ico.em { background: rgba(255, 94, 149, 0.14); color: #ff5e95; }
 .clink-ico.ph { background: rgba(27, 191, 111, 0.14); color: #1bbf6f; }
-.clink-ico.li { background: rgba(14, 165, 233, 0.14); color: #0ea5e9; }
+.clink-ico.fb { background: rgba(24, 119, 242, 0.14); color: #1877f2; }
 .clink-ico.gh { background: rgba(15, 15, 20, 0.08); color: var(--text); }
 
 [data-theme="dark"] .clink-ico.gh {
