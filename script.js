@@ -127,8 +127,6 @@
   revealTargets.forEach((el) => observer.observe(el));
 
   // ===================== Footer year =====================
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   // ===================== Music: popover + audio player =====================
   const musicBtn = document.getElementById("musicBtn");
