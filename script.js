@@ -397,4 +397,28 @@
       onSuccess();
     }
   });
+
+  // ===================== Back to top button =====================
+  const backToTop = document.getElementById("backToTop");
+  if (backToTop) {
+    const toggleBackToTop = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const isNearBottom = scrollTop + clientHeight >= scrollHeight - 200;
+
+      if (isNearBottom) {
+        backToTop.classList.add("show");
+      } else {
+        backToTop.classList.remove("show");
+      }
+    };
+
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
+    toggleBackToTop();
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 })();
