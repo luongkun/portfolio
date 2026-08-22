@@ -2837,3 +2837,42 @@ body {
   box-shadow: 0 0 0 3px rgba(199, 94, 216, .22), var(--shadow-md);
   transition: box-shadow .25s ease, border-color .25s ease;
 }
+
+/* =====================================================
+   Smooth dark mode transitions
+   ===================================================== */
+body,
+.nav-pill,
+.hero-badge,
+.hero-tag,
+.tech-card,
+.status-card,
+.about-card,
+.about-text p,
+.skill-card,
+.proj-card,
+.stat,
+.form-wrap,
+.form-inp,
+.form-ta,
+.clink,
+.btn-primary,
+.btn-ghost,
+.btn-contact,
+.meta-chip,
+.tech-icon,
+.music-pop,
+.floating-btn,
+.footer {
+  transition: background-color 0.35s ease,
+              color 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease,
+              transform 0.35s ease;
+}
+
+.name-text,
+.name-shine,
+.text-grad {
+  transition: filter 0.35s ease;
+}
