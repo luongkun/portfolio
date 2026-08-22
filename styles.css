@@ -783,6 +783,23 @@ button {
 .t-string  { color: var(--accent-from); }
 .t-arrow   { color: var(--text-soft); font-weight: 600; }
 
+/* Typing cursor */
+.hero-tag::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--accent-mid);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 [data-theme="dark"] .hero-tag {
   background: rgba(20, 15, 40, 0.55);
 }

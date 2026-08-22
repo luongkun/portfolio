@@ -39,6 +39,45 @@
     }
   });
 
+  // ===================== Typing animation =====================
+  const heroTag = document.querySelector(".hero-tag");
+  if (heroTag) {
+    const parts = [
+      { text: "{", cls: "t-bracket" },
+      { text: " turning ", cls: "t-key" },
+      { text: "\u201cideas\u201d", cls: "t-string" },
+      { text: " \u2192 ", cls: "t-arrow" },
+      { text: "\u201cproducts\u201d", cls: "t-string" },
+      { text: " }", cls: "t-bracket" }
+    ];
+    heroTag.innerHTML = "";
+    let partIdx = 0;
+    let charIdx = 0;
+    let spanEl = null;
+
+    const typeChar = () => {
+      if (partIdx >= parts.length) return;
+      const part = parts[partIdx];
+      if (!spanEl) {
+        spanEl = document.createElement("span");
+        spanEl.className = part.cls;
+        heroTag.appendChild(spanEl);
+      }
+      if (charIdx < part.text.length) {
+        spanEl.textContent += part.text[charIdx];
+        charIdx++;
+        setTimeout(typeChar, 40 + Math.random() * 30);
+      } else {
+        partIdx++;
+        charIdx = 0;
+        spanEl = null;
+        setTimeout(typeChar, 80);
+      }
+    };
+
+    setTimeout(typeChar, 600);
+  }
+
   // ===================== Mobile menu =====================
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.querySelector(".nav-links");
