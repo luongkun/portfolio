@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Không tìm thấy trang | Lương Senpai</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='dg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23ff7eaa'/%3E%3Cstop offset='55%25' stop-color='%23c75ed8'/%3E%3Cstop offset='100%25' stop-color='%235b3edc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 6 L94 50 L50 94 L6 50 Z' fill='url(%23dg)'/%3E%3Cpath d='M38 34 V66 H62' fill='none' stroke='%23fff' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <style>
+    :root{--bg-1:#fdf6fa;--text:#0f0f14;--text-muted:#5b5d72;--accent-from:#ff5e95;--accent-mid:#c75ed8;--accent-to:#7d56e8;--card:#fff;--border:rgba(15,15,20,.06);--shadow-md:0 10px 30px -10px rgba(120,80,180,.2);--font-sans:"Plus Jakarta Sans","Be Vietnam Pro",-apple-system,BlinkMacSystemFont,sans-serif;--font-display:"Be Vietnam Pro","Plus Jakarta Sans",sans-serif;--font-mono:"JetBrains Mono",monospace}
+    [data-theme="dark"]{--bg-1:#0e0c1a;--text:#f5f3ff;--text-muted:#b6b2d4;--card:#1c1735;--border:rgba(255,255,255,.08);--shadow-md:0 10px 30px -10px rgba(0,0,0,.5)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font-sans);color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg-1);background-image:radial-gradient(at 20% 0%,rgba(255,94,149,.12) 0%,transparent 50%),radial-gradient(at 80% 0%,rgba(199,94,216,.1) 0%,transparent 50%);overflow:hidden}
+    .container{text-align:center;padding:40px 28px;position:relative;z-index:1}
+    .code-404{font-family:var(--font-mono);font-size:clamp(6rem,15vw,12rem);font-weight:800;line-height:1;background:linear-gradient(120deg,var(--accent-from),var(--accent-mid) 50%,var(--accent-to));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 8px 24px rgba(199,94,216,.3));animation:float 3s ease-in-out infinite;user-select:none}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    .emoji-big{font-size:3.5rem;margin-bottom:24px;display:block;animation:wiggle 2s ease-in-out infinite}
+    @keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+    h1{font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin:16px 0 12px;color:var(--text)}
+    .desc{font-size:1.05rem;color:var(--text-muted);max-width:420px;margin:0 auto 36px;line-height:1.7}
+    .btn-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-home{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:999px;font-size:1rem;font-weight:700;text-decoration:none;transition:all .3s cubic-bezier(.645,.045,.355,1)}
+    .btn-home.primary{background:linear-gradient(135deg,var(--accent-from),var(--accent-to));color:#fff;box-shadow:0 10px 25px -8px rgba(199,94,216,.5)}
+    .btn-home.primary:hover{transform:translateY(-3px);box-shadow:0 16px 35px -8px rgba(199,94,216,.6)}
+    .btn-home.ghost{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+    .btn-home.ghost:hover{background:rgba(199,94,216,.12);border-color:var(--accent-mid);color:var(--accent-mid);transform:translateY(-3px)}
+    .shapes{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+    .shape{position:absolute;border-radius:50%;opacity:.5}
+    .s1{width:120px;height:120px;top:10%;left:10%;background:radial-gradient(circle,rgba(255,94,149,.3),transparent 70%);animation:drift 8s ease-in-out infinite}
+    .s2{width:180px;height:180px;bottom:15%;right:10%;background:radial-gradient(circle,rgba(125,86,232,.25),transparent 70%);animation:drift 10s ease-in-out infinite reverse}
+    .s3{width:80px;height:80px;top:60%;left:60%;background:radial-gradient(circle,rgba(199,94,216,.3),transparent 70%);animation:drift 7s ease-in-out infinite}
+    @keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-20px)}}
+    .theme-toggle{position:fixed;top:20px;right:20px;width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;display:grid;place-items:center;box-shadow:var(--shadow-md);transition:all .3s ease;z-index:10}
+    .theme-toggle:hover{transform:scale(1.08)}
+    .icon-sun{display:none}
+    [data-theme="dark"] .icon-sun{display:block}
+    [data-theme="dark"] .icon-moon{display:none}
+  </style>
+</head>
+<body>
+  <div class="shapes"><div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div></div>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Doi giao dien">
+    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+
+  <div class="container">
+    <span class="emoji-big">404</span>
+    <div class="code-404">404</div>
+    <h1>Trang không tồn tại</h1>
+    <p class="desc">Có vẻ như trang bạn tìm đã bị xóa, di chuyển hoặc không bao giờ tồn tại. Nhưng đừng lo, mình vẫn ở đây!</p>
+    <div class="btn-group">
+      <a href="https://luongkun.github.io/portfolio/" class="btn-home primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Về trang chủ
+      </a>
+      <a href="javascript:history.back()" class="btn-home ghost">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Quay lại
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const saved = localStorage.getItem("portfolio-theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if ((saved || (prefersDark ? "dark" : "light")) === "dark") {
+      document.documentElement.setAttribute("data-theme", "dark");
+    }
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      if (isDark) {
+        document.documentElement.removeAttribute("data-theme");
+        localStorage.setItem("portfolio-theme", "light");
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("portfolio-theme", "dark");
+      }
+    });
+  </script>
+</body>
+</html>
