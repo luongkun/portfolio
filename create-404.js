@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+const fs = require("fs");
+
+const html = `<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
@@ -83,4 +85,7 @@
     });
   </script>
 </body>
-</html>
+</html>`;
+
+fs.writeFileSync("404.html", html);
+console.log("404.html created!");
