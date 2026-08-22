@@ -1,6 +1,23 @@
 (() => {
   "use strict";
 
+  // ===================== Loading Screen =====================
+  const loader = document.getElementById("loader");
+  if (loader) {
+    const hideLoader = () => {
+      loader.classList.add("hidden");
+      document.body.style.overflow = "";
+    };
+
+    document.body.style.overflow = "hidden";
+
+    if (document.readyState === "complete") {
+      setTimeout(hideLoader, 800);
+    } else {
+      window.addEventListener("load", () => setTimeout(hideLoader, 800));
+    }
+  }
+
   // ===================== Theme toggle =====================
   const themeToggle = document.getElementById("themeToggle");
   const root = document.documentElement;

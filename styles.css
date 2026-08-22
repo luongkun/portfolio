@@ -1,4 +1,89 @@
 /* =====================================================
+   Loading Screen
+   ===================================================== */
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loader-diamond {
+  animation: loaderPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loaderPulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(5deg); }
+}
+
+.loader-text {
+  display: flex;
+  gap: 2px;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.loader-letter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letterFade 0.5s ease forwards;
+  animation-delay: calc(var(--i) * 0.05s);
+}
+
+@keyframes letterFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loader-bar {
+  width: 180px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-from), var(--accent-to));
+  border-radius: 4px;
+  animation: loaderFill 1.8s ease-in-out forwards;
+}
+
+@keyframes loaderFill {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+[data-theme="dark"] .loader {
+  background: #07051a;
+}
+
+/* =====================================================
    Variables & Base
    ===================================================== */
 :root {
