@@ -3,10 +3,14 @@
 
   // ===================== Cấu hình form liên hệ =====================
   // Endpoint nhận tin nhắn từ form (vd. Formspree: "https://formspree.io/f/abcdwxyz").
-  // Để trống => form mở sẵn app email của khách kèm nội dung đã điền, thay vì
-  // báo thành công giả. Cách lấy endpoint: xem README mục "Kích hoạt form liên hệ".
+  // Để trống => form mở sẵn nơi soạn thư kèm nội dung đã điền, thay vì báo
+  // thành công giả. Cách lấy endpoint: xem README mục "Kích hoạt form liên hệ".
   const FORM_ENDPOINT = "";
   const CONTACT_EMAIL = "lucifermeta0210@gmail.com";
+  // Chưa có FORM_ENDPOINT thì mở gì cho khách soạn thư:
+  //   "gmail"  => Gmail trên web (mail.google.com), mở ở tab mới
+  //   "mailto" => app email mặc định của máy khách
+  const FALLBACK_MODE = "gmail";
 
   // ===================== Loading Screen =====================
   const loader = document.getElementById("loader");
@@ -374,13 +378,21 @@
       notifyTimer = setTimeout(() => box.classList.remove("show"), 6000);
     };
 
-    /** Mở app email của khách với nội dung điền sẵn — dùng khi chưa cấu hình endpoint. */
-    const openMailClient = (name, email, message) => {
-      const subject = `[Portfolio] Tin nhắn từ ${name}`;
-      const body = `${message}\n\n—\n${name}\n${email}`;
-      window.location.href =
-        `mailto:${CONTACT_EMAIL}` +
-        `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    /** Mở nơi soạn thư với nội dung điền sẵn — dùng khi chưa cấu hình endpoint. */
+    const openMailCompose = (name, email, message) => {
+      const su = encodeURIComponent(`[Portfolio] Tin nhắn từ ${name}`);
+      const body = encodeURIComponent(`${message}\n\n—\n${name}\n${email}`);
+      const to = encodeURIComponent(CONTACT_EMAIL);
+
+      if (FALLBACK_MODE === "gmail") {
+        const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${body}`;
+        // Tab mới để khách không mất trang portfolio đang xem. Nếu popup bị chặn
+        // (window.open trả null) thì điều hướng luôn, đừng để khách bấm mà không thấy gì.
+        if (!window.open(url, "_blank", "noopener")) window.location.href = url;
+        return;
+      }
+
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${su}&body=${body}`;
     };
 
     cform.addEventListener("submit", async (e) => {
@@ -398,10 +410,15 @@
       const email = fEmail.value.trim();
       const message = fMsg.value.trim();
 
-      // Chưa có endpoint: chuyển sang mailto để tin nhắn không bị mất im lặng.
+      // Chưa có endpoint: mở sẵn nơi soạn thư để tin nhắn không bị mất im lặng.
       if (!FORM_ENDPOINT) {
-        openMailClient(name, email, message);
-        notify(okBox, "Đang mở ứng dụng email của bạn để gửi tin nhắn…");
+        openMailCompose(name, email, message);
+        notify(
+          okBox,
+          FALLBACK_MODE === "gmail"
+            ? "Đang mở Gmail — bạn bấm Gửi trong đó là xong nhé."
+            : "Đang mở ứng dụng email của bạn — bạn bấm Gửi là xong nhé."
+        );
         return;
       }
 

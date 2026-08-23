@@ -44,9 +44,16 @@ là thấy ngay. `index.html` chỉ được sinh ra lúc build để deploy ch�
 ## Kích hoạt form liên hệ
 
 GitHub Pages chỉ host file tĩnh, không chạy được backend — nên form cần một
-service nhận tin nhắn hộ. Khi `FORM_ENDPOINT` còn để trống, form sẽ **mở app
-email của khách** kèm nội dung điền sẵn (hoạt động được, nhưng khách phải tự
-bấm gửi).
+service nhận tin nhắn hộ. Khi `FORM_ENDPOINT` còn để trống, form sẽ **mở sẵn
+nơi soạn thư** kèm nội dung khách đã điền — hoạt động được, nhưng khách phải tự
+bấm Gửi.
+
+Chọn nơi soạn thư bằng `FALLBACK_MODE` ở đầu `script.js`:
+
+| `FALLBACK_MODE` | Mở gì | Lưu ý |
+|---|---|---|
+| `"gmail"` (mặc định) | Gmail web ở tab mới | Khách không dùng Gmail sẽ phải đăng nhập |
+| `"mailto"` | App email mặc định của máy | Máy chưa cấu hình app email thì bấm không thấy gì |
 
 Để tin nhắn vào thẳng hòm thư, lấy endpoint miễn phí rồi dán vào đầu `script.js`:
 
