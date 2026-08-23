@@ -385,13 +385,21 @@
       const to = encodeURIComponent(CONTACT_EMAIL);
 
       if (FALLBACK_MODE === "gmail") {
-        const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${body}`;
-        // Tab mới để khách không mất trang portfolio đang xem. Nếu popup bị chặn
-        // (window.open trả null) thì điều hướng luôn, đừng để khách bấm mà không thấy gì.
-        if (!window.open(url, "_blank", "noopener")) window.location.href = url;
+        // Mở bằng cách click một <a target="_blank"> thay vì window.open: khi có
+        // "noopener" thì window.open LUÔN trả null (không phải chỉ lúc bị chặn),
+        // nên dò theo giá trị trả về sẽ điều hướng luôn cả tab đang mở.
+        // Click <a> trong lúc khách vừa bấm nút cũng không bị popup blocker chặn.
+        const a = document.createElement("a");
+        a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${su}&body=${body}`;
+        a.target = "_blank";
+        a.rel = "noopener";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
         return;
       }
 
+      // mailto: không điều hướng trang — browser giao cho app email của hệ điều hành.
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${su}&body=${body}`;
     };
 
@@ -416,8 +424,8 @@
         notify(
           okBox,
           FALLBACK_MODE === "gmail"
-            ? "Đang mở Gmail — bạn bấm Gửi trong đó là xong nhé."
-            : "Đang mở ứng dụng email của bạn — bạn bấm Gửi là xong nhé."
+            ? `Đang mở Gmail ở tab mới — bạn bấm Gửi trong đó là xong. Không thấy tab nào? Email trực tiếp: ${CONTACT_EMAIL}`
+            : `Đang mở app email của bạn — bạn bấm Gửi là xong. Không mở được? Email trực tiếp: ${CONTACT_EMAIL}`
         );
         return;
       }
