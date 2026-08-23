@@ -676,8 +676,9 @@ button {
 }
 
 .badge-icon {
-  font-size: 1.05rem;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-from);
   animation: rocketWiggle 3s ease-in-out infinite;
 }
 
@@ -846,7 +847,7 @@ button {
   box-shadow: var(--shadow-sm);
 }
 
-.meta-emoji { font-size: 0.95rem; line-height: 1; }
+.meta-emoji { display: inline-flex; align-items: center; color: var(--accent-from); }
 
 [data-theme="dark"] .meta-chip {
   background: rgba(255, 255, 255, 0.05);
@@ -1456,8 +1457,17 @@ button {
   font-size: 0.95rem;
 }
 
-.info-list li span {
-  font-size: 1.1rem;
+/* Ô icon vuông có nền nhạt — cùng kiểu với .clink-ico ở section liên hệ */
+.info-list li .info-ico {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: rgba(255, 94, 149, 0.12);
+  color: var(--accent-from);
+  flex-shrink: 0;
 }
 
 /* =====================================================
@@ -1507,7 +1517,8 @@ button {
   background: linear-gradient(135deg, var(--accent-from), var(--accent-to));
   display: grid;
   place-items: center;
-  font-size: 1.6rem;
+  /* icon vẽ bằng currentColor nên phải set trắng để nổi trên nền gradient */
+  color: #fff;
   margin-bottom: 20px;
   box-shadow: 0 8px 18px -6px rgba(199, 94, 216, 0.4);
 }
@@ -1811,10 +1822,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.6rem;
+  color: rgba(255, 255, 255, 0.92);
   transition: transform 0.5s ease;
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.18));
 }
+
+/* Icon 64px: stroke 2.2 của viewBox 24 bị phóng lên ~5.9px, quá dày — mảnh lại */
+.proj-thumb-bg .ico { stroke-width: 1.6; }
 
 .proj-card:hover .proj-thumb-bg {
   transform: scale(1.1) rotate(-3deg);
@@ -2337,10 +2351,15 @@ body {
 }
 
 .music-pop-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-weight: 700;
   font-size: 14px;
   color: var(--text);
 }
+
+.music-pop-title .ico { color: var(--accent-from); }
 
 .music-pop-close {
   background: transparent;
