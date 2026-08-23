@@ -1,6 +1,13 @@
 (() => {
   "use strict";
 
+  // ===================== Cấu hình form liên hệ =====================
+  // Endpoint nhận tin nhắn từ form (vd. Formspree: "https://formspree.io/f/abcdwxyz").
+  // Để trống => form mở sẵn app email của khách kèm nội dung đã điền, thay vì
+  // báo thành công giả. Cách lấy endpoint: xem README mục "Kích hoạt form liên hệ".
+  const FORM_ENDPOINT = "";
+  const CONTACT_EMAIL = "lucifermeta0210@gmail.com";
+
   // ===================== Loading Screen =====================
   const loader = document.getElementById("loader");
   if (loader) {
@@ -329,6 +336,7 @@
     const fEmail = document.getElementById("f-email");
     const fMsg = document.getElementById("f-msg");
     const okBox = document.getElementById("form-ok");
+    const failBox = document.getElementById("form-fail");
     const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const showErr = (input, errId) => {
@@ -354,7 +362,28 @@
       });
     });
 
-    cform.addEventListener("submit", (e) => {
+    /** Hiện một hộp thông báo (ok hoặc lỗi), ẩn hộp kia, tự tắt sau 6s. */
+    let notifyTimer = null;
+    const notify = (box, text) => {
+      clearTimeout(notifyTimer);
+      [okBox, failBox].forEach((b) => b && b.classList.remove("show"));
+      if (!box) return;
+      const label = box.querySelector(".form-msg-text");
+      if (label && text) label.textContent = text;
+      box.classList.add("show");
+      notifyTimer = setTimeout(() => box.classList.remove("show"), 6000);
+    };
+
+    /** Mở app email của khách với nội dung điền sẵn — dùng khi chưa cấu hình endpoint. */
+    const openMailClient = (name, email, message) => {
+      const subject = `[Portfolio] Tin nhắn từ ${name}`;
+      const body = `${message}\n\n—\n${name}\n${email}`;
+      window.location.href =
+        `mailto:${CONTACT_EMAIL}` +
+        `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    };
+
+    cform.addEventListener("submit", async (e) => {
       e.preventDefault();
       let valid = true;
       if (!fName.value.trim())            { showErr(fName, "e-name");   valid = false; } else clearErr(fName, "e-name");
@@ -364,18 +393,37 @@
 
       const sub = cform.querySelector(".form-sub");
       if (!sub) return;
+
+      const name = fName.value.trim();
+      const email = fEmail.value.trim();
+      const message = fMsg.value.trim();
+
+      // Chưa có endpoint: chuyển sang mailto để tin nhắn không bị mất im lặng.
+      if (!FORM_ENDPOINT) {
+        openMailClient(name, email, message);
+        notify(okBox, "Đang mở ứng dụng email của bạn để gửi tin nhắn…");
+        return;
+      }
+
       const original = sub.innerHTML;
       sub.disabled = true;
       sub.innerHTML = '<svg class="ico spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> \u0110ang g\u1eedi\u2026';
-      setTimeout(() => {
+
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({ name, email, message }),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         cform.reset();
+        notify(okBox, "Cảm ơn bạn! Mình sẽ phản hồi trong vòng 24 giờ.");
+      } catch {
+        notify(failBox, `Gửi không thành công. Bạn email trực tiếp giúp mình: ${CONTACT_EMAIL}`);
+      } finally {
         sub.disabled = false;
         sub.innerHTML = original;
-        if (okBox) {
-          okBox.classList.add("show");
-          setTimeout(() => okBox.classList.remove("show"), 5000);
-        }
-      }, 1100);
+      }
     });
   }
 

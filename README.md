@@ -8,23 +8,61 @@ Personal portfolio website của Nguyễn Thế Lương (Lương Senpai).
 
 | File | Mô tả |
 |---|---|
-| `index.html` | File deploy chính (đã minify + inline CSS/JS, ~27KB gzipped) |
+| `index.html` | File deploy chính (đã minify + inline CSS/JS) — **tự sinh, đừng sửa tay** |
 | `index.src.html` | HTML nguồn (chưa inline) — chỉnh sửa file này |
 | `styles.css` | CSS nguồn — chỉnh sửa file này |
 | `script.js` | JS nguồn — chỉnh sửa file này |
+| `build.js` | Script build: minify + inline CSS/JS vào `index.html` |
+| `dev.js` | Dev server có live-reload |
 | `em-nhac-anh.mp3` | Track nhạc nền cho music player |
+
+## Bắt đầu
+
+```bash
+npm install
+```
 
 ## Cách chỉnh sửa
 
-1. Sửa nội dung trong `index.src.html`, `styles.css`, hoặc `script.js`
-2. Build lại file deploy:
+1. Chạy dev server — sửa file là trang tự reload, không cần build:
    ```bash
-   npx esbuild styles.css --minify --outfile=styles.min.css
-   npx esbuild script.js  --minify --outfile=script.min.js
-   cp index.src.html index.html
-   # Inline minified CSS/JS into index.html (xem inline_assets.py)
+   npm run dev        # http://localhost:5173
    ```
-3. Commit + push → GitHub Pages tự deploy
+2. Sửa nội dung trong `index.src.html`, `styles.css`, hoặc `script.js`
+3. Build lại file deploy trước khi push:
+   ```bash
+   npm run build
+   ```
+4. Commit + push → GitHub Pages tự deploy
+
+> `npm run check` xác nhận `index.html` đã khớp với source — chạy trước khi push
+> để chắc chắn không quên build.
+
+Dev server phục vụ `index.src.html` với CSS/JS để ngoài (không minify) nên sửa
+là thấy ngay. `index.html` chỉ được sinh ra lúc build để deploy chỉ tốn 1 request.
+
+## Kích hoạt form liên hệ
+
+GitHub Pages chỉ host file tĩnh, không chạy được backend — nên form cần một
+service nhận tin nhắn hộ. Khi `FORM_ENDPOINT` còn để trống, form sẽ **mở app
+email của khách** kèm nội dung điền sẵn (hoạt động được, nhưng khách phải tự
+bấm gửi).
+
+Để tin nhắn vào thẳng hòm thư, lấy endpoint miễn phí rồi dán vào đầu `script.js`:
+
+```js
+const FORM_ENDPOINT = "https://formspree.io/f/abcdwxyz";
+```
+
+| Service | Free tier | Cách lấy |
+|---|---|---|
+| [Formspree](https://formspree.io) | 50 tin/tháng | Tạo form → copy URL `formspree.io/f/xxxxxxx` |
+| [Web3Forms](https://web3forms.com) | 250 tin/tháng | Nhập email → nhận `access_key` |
+
+Code gửi `POST` với JSON `{ name, email, message }` — khớp sẵn với Formspree.
+Dùng Web3Forms thì thêm `access_key` vào body trong `script.js`.
+
+Sau khi dán endpoint, nhớ `npm run build` rồi push.
 
 ## Thêm/đổi nhạc
 
