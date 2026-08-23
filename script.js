@@ -12,11 +12,6 @@
   //   "mailto" => app email mặc định của máy khách
   const FALLBACK_MODE = "gmail";
 
-  // OS bật "reduce motion" => bỏ hiệu ứng gõ chữ ở hero (hiện sẵn cả câu).
-  // Hiệu ứng ambient (bóng bay, glow) vẫn giữ chạy — xem @media
-  // prefers-reduced-motion ở cuối styles.css.
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   // ===================== Loading Screen =====================
   const loader = document.getElementById("loader");
   if (loader) {
@@ -91,16 +86,7 @@
       }
     };
 
-    if (reduceMotion) {
-      parts.forEach((part) => {
-        const s = document.createElement("span");
-        s.className = part.cls;
-        s.textContent = part.text;
-        heroTag.appendChild(s);
-      });
-    } else {
-      setTimeout(typeChar, 600);
-    }
+    setTimeout(typeChar, 600);
   }
 
   // ===================== Mobile menu =====================

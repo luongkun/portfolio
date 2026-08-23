@@ -311,9 +311,9 @@ button {
   backface-visibility: hidden;
 }
 
-/* Animation visibility: ambient hiệu ứng được giữ chạy mọi lúc — kể cả khi OS
-   bật reduce-motion, vì người dùng muốn nhìn thấy hiệu ứng. Chúng nằm trong
-   danh sách ngoại lệ của @media prefers-reduced-motion ở cuối file. */
+/* Animation visibility: ambient hiệu ứng được giữ chạy mọi lúc.
+   (Trước đây có @media prefers-reduced-motion: reduce tắt animations,
+   nhưng người dùng muốn nhìn thấy hiệu ứng dù OS bật reduce-motion.) */
 
 /* Spheres (CSS gradient circles) */
 .sphere {
@@ -2905,38 +2905,4 @@ body,
 .name-shine,
 .text-grad {
   transition: filter 0.35s ease;
-}
-
-/* =====================================================
-   Giảm chuyển động (prefers-reduced-motion)
-   =====================================================
-   OS bật "reduce motion" thì rút gần hết animation/transition về ~0.
-   Ba ngoại lệ có chủ ý:
-   - .shapes + con của nó, .hero-glow: hiệu ứng ambient ở hero — giữ chạy theo
-     ý người dùng (xem comment ở .shape phía trên)
-   - .spin: vòng xoay lúc gửi form là tín hiệu "đang xử lý", tắt đi thì khách
-     không biết form có chạy hay không
-   Dùng 0.01ms chứ không dùng animation: none — animation vẫn chạy tới frame
-   cuối nên phần tử nào ẩn ở frame đầu (chữ trong loading screen) không bị mất.
-   :not() nhận danh sách selector là Selectors 4; browser quá cũ không hiểu sẽ
-   bỏ cả rule => trang chạy y như trước, không vỡ. */
-@media (prefers-reduced-motion: reduce) {
-  *:not(.shapes, .shapes *, .hero-glow, .spin),
-  *:not(.shapes, .shapes *, .hero-glow, .spin)::before,
-  *:not(.shapes, .shapes *, .hero-glow, .spin)::after {
-    animation-duration: 0.01ms !important;
-    animation-delay: 0ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    transition-delay: 0ms !important;
-  }
-
-  html { scroll-behavior: auto; }
-
-  /* Reveal-on-scroll hiện luôn, không phụ thuộc IntersectionObserver */
-  .reveal,
-  .reveal.visible {
-    opacity: 1;
-    transform: none;
-  }
 }
