@@ -424,8 +424,8 @@
         notify(
           okBox,
           FALLBACK_MODE === "gmail"
-            ? `Đang mở Gmail ở tab mới — bạn bấm Gửi trong đó là xong. Không thấy tab nào? Email trực tiếp: ${CONTACT_EMAIL}`
-            : `Đang mở app email của bạn — bạn bấm Gửi là xong. Không mở được? Email trực tiếp: ${CONTACT_EMAIL}`
+            ? "Đang mở Gmail — bạn bấm Gửi trong đó là xong nhé."
+            : "Đang mở ứng dụng email của bạn — bạn bấm Gửi là xong nhé."
         );
         return;
       }
